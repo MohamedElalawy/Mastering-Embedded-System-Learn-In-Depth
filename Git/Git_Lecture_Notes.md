@@ -32,4 +32,10 @@ Next, I created a working directory and cloned a repository into it. Here's what
 ---
 ![Screenshot 2025-03-13 205857](https://github.com/user-attachments/assets/02256889-2d83-4aa4-9f12-2bf7596fb07e)
 ---
-
+10. **Creating a README File**: After cloning the repository, I decided to add a simple text file to the project. I used the `echo` command to create a file named `README.txt` with the content "Hellooo". The command I used was:
+   ```
+   echo "Hellooo" > README.txt
+   ```
+   This command created the `README.txt` file in the `WorkingDirectoryTest` directory and added the text "Hellooo" to it. This file can serve as a starting point for documenting the project.
+![Screenshot 2025-03-13 210635](https://github.com/user-attachments/assets/f36d8852-3fdb-4e04-b88d-aaaa7918bf29)
+---
