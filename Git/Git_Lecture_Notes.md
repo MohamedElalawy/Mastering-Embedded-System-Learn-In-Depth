@@ -1,1 +1,19 @@
+Got it! Let me revise the explanation with the correct directory name, "RepoTest":
+
+---
+
+In this part of my Git learning journey, I focused on setting up a new Git repository for my project. Here's what I did step by step:
+
+1. **Navigating to the Project Directory**: First, I opened my terminal and navigated to the directory where I wanted to initialize the Git repository. The path was `E:/Mastering Embedded System Learn In Depth/git/RepoTest`. This is where I plan to manage my project files and track changes using Git.
+
+2. **Checking the Current Directory**: To make sure I was in the right place, I used the `pwd` command. This command stands for "print working directory," and it confirmed that I was indeed in the correct folder: `E:/Mastering Embedded System Learn In Depth/git/RepoTest`.
+
+3. **Initializing the Git Repository**: Next, I ran the `git init` command. This command initializes a new Git repository in the current directory. After running it, I saw a message saying, "Initialized empty Git repository in E:/Mastering Embedded System Learn In Depth/git/RepoTest/.git/". This means that Git has set up all the necessary files and folders to start tracking changes in this directory.
+
+4. **Repository Status**: After initializing the repository, I noticed that my terminal prompt changed. It now shows `(master)` at the end, indicating that I'm working in the default branch of the repository, which is typically called `master`. This is where all my commits will go unless I create or switch to another branch.
+
+---
+
+By following these steps, I successfully set up a Git repository for my project in the `RepoTest` directory. 
+![Screenshot 2025-03-13 204356](https://github.com/user-attachments/assets/688769cb-1de2-4a34-a0b1-ec62efc969de)
 
