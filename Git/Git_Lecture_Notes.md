@@ -16,3 +16,20 @@ In this part of my Git learning journey, I focused on setting up a new Git repos
 ---
 ![Screenshot 2025-03-13 204725](https://github.com/user-attachments/assets/123309c6-b266-4307-a1de-2efaf95a5c05)
 ---
+Next, I created a working directory and cloned a repository into it. Here's what I did step by step:
+
+6. **Creating a Working Directory**: I started by navigating to a new directory called `WorkingDirectoryTest` located at `E:/Mastering_Embedded_System_Learn_in_Depth/git/WorkingDirectoryTest`. This directory is where I planned to work on my project and clone an existing repository.
+
+7. **Checking the Current Directory**: To ensure I was in the correct location, I used the `pwd` command. The output confirmed that I was in the right directory: `/e/Mastering_Embedded_System_Learn_in_Depth/git/WorkingDirectoryTest`.
+
+8. **Cloning the Repository**: Next, I cloned an existing repository into this working directory using the `git clone` command. The repository I cloned was located at `/e/Mastering_Embedded_System_Learn_in_Depth/git/RepoTest`. The command I used was:
+   ```
+   git clone /e/Mastering_Embedded_System_Learn_in_Depth/git/RepoTest
+   ```
+   After running this command, Git created a new directory named `RepoTest` inside my working directory and cloned the repository into it.
+
+9. **Empty Repository Warning**: During the cloning process, I received a warning: "Warning: You appear to have cloned an empty repository." This message indicates that the repository I cloned doesn’t contain any commits or files yet. It’s essentially an empty repository, which is fine since I can now start adding files and making commits to it.
+---
+![Screenshot 2025-03-13 205857](https://github.com/user-attachments/assets/02256889-2d83-4aa4-9f12-2bf7596fb07e)
+---
+
