@@ -1,5 +1,10 @@
+## Introduction  
 
-In this part of my Git learning journey, I focused on setting up a new Git repository for my project. Here's what I did step by step:
+This file contains my notes from the **Version Control Systems (VCS) lecture** in the **Mastering Embedded System Diploma by Learn In Depth**.  
+
+In this lecture, we explored the fundamentals of version control, with a strong focus on **Git**. The notes include **screenshots from our practice sessions** along with **explanations** of key commands and concepts. From initializing repositories to branching, merging, and handling commits, these notes serve as a structured reference for working with Git efficiently.  
+
+setting up a new Git repository for my project. Here's what I did step by step:
 
 1. **Navigating to the Project Directory**: First, I opened my terminal and navigated to the directory where I wanted to initialize the Git repository. The path was `E:/Mastering Embedded System Learn In Depth/git/RepoTest`. This is where I plan to manage my project files and track changes using Git.
 
@@ -203,4 +208,20 @@ In this part,  I took steps to fix the corrupted version of the `my_branch_readm
    git commit -m "reversing last commit to solve bug" my_branch_readme.txt
    ```
    The commit message "reversing last commit to solve bug" indicates that this commit is intended to fix the issue caused by the previous undesired change. The output showed that one file was changed with one deletion, reflecting the correction made to the file.
+In this part of my Git workflow, I attempted to push the fixed changes to the remote repository. Here's what I did:
 
+48. **Pushing the Fix**: After committing the corrected version of the `my_branch_readme.txt` file, I wanted to push these changes to the remote repository. I used the `git push` command to upload the changes. The command I ran was:
+   ```
+   git push origin my_branch
+   ```
+   This command is intended to push the changes from my local `my_branch` branch to the remote `my_branch` branch.
+![Screenshot 2025-03-13 233323](https://github.com/user-attachments/assets/8ff51391-4f37-42dd-ad85-7924adfc7da4)
+---
+![Screenshot 2025-03-13 233556](https://github.com/user-attachments/assets/6893e1f7-3142-4bc3-85fb-d817d0bdad23)
+---
+49. I successfully merged my branch `my_branch` into `master`. First, I checked the differences between the two branches using `git diff my_branch master`, which showed that `my_branch_readme.txt` was missing in `master`.  
+
+To resolve this, I switched to `master` using `git checkout master`, ensuring it was up to date. Then, I merged `my_branch` into `master` using a fast-forward merge with `git merge my_branch`, which restored `my_branch_readme.txt` in `master`.  
+
+Now, my changes are integrated, and `master` contains the file from `my_branch`. 
+![Screenshot 2025-03-14 001333](https://github.com/user-attachments/assets/717d8019-c846-42c4-9d8e-a06d07bbfce9)
