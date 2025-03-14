@@ -12,3 +12,7 @@ In this part of my Git learning journey, I focused on setting up a new Git repos
 ---
 ![Screenshot 2025-03-13 204356](https://github.com/user-attachments/assets/688769cb-1de2-4a34-a0b1-ec62efc969de)
 ---
+5. **Configuring the Repository as Bare**: Next, I ran the command `git config core.bare true`. This command changes the configuration of the repository to make it a "bare" repository. A bare repository is a special type of Git repository that doesn’t have a working directory. Instead, it only contains the version control information (essentially, the contents of the `.git` folder) and no actual working files. Bare repositories are typically used as central repositories for sharing and collaboration, often serving as remote repositories where team members can push and pull changes. By setting this configuration, I prepared the repository for scenarios where it might act as a shared or remote repository, which is especially useful in collaborative projects.
+---
+![Screenshot 2025-03-13 204725](https://github.com/user-attachments/assets/123309c6-b266-4307-a1de-2efaf95a5c05)
+---
