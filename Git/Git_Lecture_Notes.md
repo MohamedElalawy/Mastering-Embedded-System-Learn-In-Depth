@@ -1,6 +1,3 @@
-Got it! Let me revise the explanation with the correct directory name, "RepoTest":
-
----
 
 In this part of my Git learning journey, I focused on setting up a new Git repository for my project. Here's what I did step by step:
 
