@@ -175,3 +175,32 @@ In this part of my Git workflow, I took steps to revert to the correct version o
 
 ![Screenshot 2025-03-13 232303](https://github.com/user-attachments/assets/40ace3a6-61c3-4567-a308-29390e982097)
 ---
+In this part,  I took steps to fix the corrupted version of the `my_branch_readme.txt` file by copying the correct version from a previous commit. Here's what I did:
+
+43. **Copying the Correct File**: While in the detached HEAD state (at the commit `91dc240109dale48c85c7ddb9f7d89519f775d66`), I copied the correct version of the `my_branch_readme.txt` file to a temporary location. The command I used was:
+   ```
+   cp my_branch_readme.txt .../
+   ```
+   This command copied the file to a directory outside the repository, ensuring I could access it after switching branches.
+
+44. **Switching Back to the Corrupted Branch**: After copying the correct file, I switched back to the `my_branch` branch using the `git checkout` command:
+   ```
+   git checkout my_branch
+   ```
+   This command moved me back to the `my_branch` branch, where the corrupted version of the file was present.
+
+45. **Next Steps**: Now that I have the correct version of the file saved, I plan to paste it back into the `my_branch` directory to replace the corrupted version. This will effectively restore the file to its correct state.
+
+
+46. **Pasting the Correct File**: I copied the correct version of the `my_branch_readme.txt` file from the temporary location back into the `my_branch` directory. The command I used was:
+   ```
+   cp .../my_branch_readme.txt .
+   ```
+   This command replaced the corrupted version of the file in the `my_branch` directory with the correct version I had saved earlier.
+
+47. **Committing the Fix**: After pasting the correct file, I staged and committed the change to the repository. The command I ran was:
+   ```
+   git commit -m "reversing last commit to solve bug" my_branch_readme.txt
+   ```
+   The commit message "reversing last commit to solve bug" indicates that this commit is intended to fix the issue caused by the previous undesired change. The output showed that one file was changed with one deletion, reflecting the correction made to the file.
+
