@@ -36,7 +36,7 @@ Next, I created a working directory and cloned a repository into it. Here's what
 documenting the project.
 ![Screenshot 2025-03-13 210635](https://github.com/user-attachments/assets/f36d8852-3fdb-4e04-b88d-aaaa7918bf29)
 ---
-11. **Staging the Changes**: After modifying the file, I needed to stage the changes for commit. I used the `git add` command to add the updated `README.txt` file to the staging area. The command I ran was:
+11. **Staging the Changes**: I used the `git add` command to add the updated `README.txt` file to the staging area. The command I ran was:
    ```
    git add README.txt
    ```
