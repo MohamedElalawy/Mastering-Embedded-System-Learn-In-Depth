@@ -50,3 +50,19 @@ This committed the changes to the repository with the message "README.txt". The 
 
 ![Screenshot 2025-03-13 220444](https://github.com/user-attachments/assets/4b6855ea-ad34-4304-8953-099d1b08535a)
 ---
+13. **Pushing Changes to the Repository**: After committing the changes locally, I pushed them to the remote repository using the git push command. This command uploads my local commits to the remote repository, making the changes available to others who might be collaborating on the project. The output of the git push command showed that the objects were enumerated, compressed, and written successfully. It also indicated that a new branch, master, was created and pushed to the remote repository located at E:/Mastering_Embedded_System_Learn_In_Depth/git/RepoTest.
+    
+![Screenshot 2025-03-13 220922](https://github.com/user-attachments/assets/e71f1ee8-bcb8-485c-b249-1730d1b9027c)
+---
+In this part of my Git workflow, I used the `gitk` command to visualize the commit history of my repository. Here's what I did and observed:
+
+14. **Launching Gitk**: I ran the `gitk` command in my terminal. This command opens a graphical interface that displays the commit history of the repository. It’s a useful tool for visualizing the changes, branches, and commits in a more intuitive way compared to the command line.
+
+15. **Viewing Commit History**: The `gitk` interface showed a detailed history of commits, including the most recent commit I made to the `README.txt` file. Each commit was displayed with its unique hash, author, date, and commit message. This made it easy to see the progression of changes in the repository.
+
+16. **Inspecting Specific Commits**: I could click on individual commits to see more details, such as the changes made in each commit. For example, I was able to see the modifications to the `README.txt` file, including the insertion and deletion of lines. This level of detail is helpful for understanding the evolution of the project and tracking specific changes.
+
+17. **Understanding the Workflow**: Using `gitk` gave me a clearer picture of how my commits are structured and how they relate to each other. It’s a great way to review the history of the repository, especially when working on larger projects with multiple contributors.
+    
+![Screenshot 2025-03-13 221430](https://github.com/user-attachments/assets/506752e8-c7c8-4828-a520-3ca545aeaf8a)
+---
