@@ -36,7 +36,8 @@ Next, I created a working directory and cloned a repository into it. Here's what
    ```
    echo "Hellooo" > README.txt
    ```
-    This command created the README.txt file in the WorkingDirectoryTest directory and added the text "Hellooo" to it. This file can serve as a starting point for documenting the project.
----
+   This command created the README.txt file in the WorkingDirectoryTest directory and added the text "Hellooo" to it. This file can serve as a starting point for 
+documenting the project.
+
 ![Screenshot 2025-03-13 210635](https://github.com/user-attachments/assets/f36d8852-3fdb-4e04-b88d-aaaa7918bf29)
 ---
