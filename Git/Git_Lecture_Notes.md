@@ -1,10 +1,10 @@
 
 
-## This file contains my notes from the **Version Control Systems (VCS) lecture** in the **Mastering Embedded System Diploma by Learn In Depth**.  
+# This file contains my notes from the **Version Control Systems (VCS) lecture** in the **Mastering Embedded System Diploma by Learn In Depth**.  
 
 In this lecture, we explored the fundamentals of version control, with a strong focus on **Git**. The notes include **screenshots from our practice sessions** along with **explanations** of key commands and concepts. From initializing repositories to branching, merging, and handling commits, these notes serve as a structured reference for working with Git efficiently.  
 
-# setting up a new Git repository for my project. Here's what I did step by step:
+## setting up a new Git repository for my project. Here's what I did step by step:
 
 1. **Navigating to the Project Directory**: First, I opened my terminal and navigated to the directory where I wanted to initialize the Git repository. The path was `E:/Mastering Embedded System Learn In Depth/git/RepoTest`. This is where I plan to manage my project files and track changes using Git.
 
