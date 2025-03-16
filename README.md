@@ -5,32 +5,29 @@
 ---
 
 ## 📊 Diploma Progress  
-### ![Progress](https://progress-bar.dev/8/)  
-_(8% completed)_  
+### █░░░░░░░░░ (10%)
+
 
 ---
 
-## 📁 Course Units Progress
+| 📌 Unit Name                            | Progress         |
+|-----------------------------------------|-----------------|
+| 🔹 **C Programming**                    | ████░░░░░░ (40%) |
+| 🔹 **Embedded C**                        | ░░░░░░░░░░ (0%)  |
+| 🔹 **System Architect**                  | ░░░░░░░░░░ (0%)  |
+| 🔹 **First Term Exam And Project**       | ░░░░░░░░░░ (0%)  |
+| 🔹 **Microcontroller Arch**              | ░░░░░░░░░░ (0%)  |
+| 🔹 **MCU Essential Peripherals**         | ░░░░░░░░░░ (0%)  |
+| 🔹 **MCU Interfacing**                   | ░░░░░░░░░░ (0%)  |
+| 🔹 **MCU (Timers & ADC)**                | ░░░░░░░░░░ (0%)  |
+| 🔹 **Testing & Validation**              | ░░░░░░░░░░ (0%)  |
+| 🔹 **Embedded Systems Jobs**             | ░░░░░░░░░░ (0%)  |
+| 🔹 **Advanced Topics**                   | ░░░░░░░░░░ (0%)  |
+| 🔹 **Mastering CAN Protocol**            | ░░░░░░░░░░ (0%)  |
+| 🔹 **Mastering Arm Cortex M3/4**         | ░░░░░░░░░░ (0%)  |
+| 🔹 **My Own RTOS**                       | ░░░░░░░░░░ (0%)  |
+| 🔹 **Sensors and Actuators**             | ░░░░░░░░░░ (0%)  |
+| 🔹 **Soft Skills**                       | ░░░░░░░░░░ (0%)  |
 
-| 📌 Unit Name           | Progress |
-|------------------------|----------|
-| 🔹 **C Programming**   | ████░░░░░░  (40%) |
-| 🔹 **Embedded C**      | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **System Architect**   | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **First Term Exam And Project**     | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **Microcontroller Arch**            | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **MCU Essential Pripheralas**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **MCU Interfacing**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **MCU (Timers & ADC)**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **SW Engineering (Testing & Validation)**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **MCU Interfacing**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **Embedded Systems Jops & 3/4 Star**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **Advanced Topics**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **MCU Interfacing**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **Mastering CAN Protocol**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **Mastering Arm Cortex M3/4**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **MY Own RTOS**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **Sensors and Actuators**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
-| 🔹 **Soft Skills**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
 
 
