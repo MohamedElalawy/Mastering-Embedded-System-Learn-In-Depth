@@ -14,7 +14,7 @@ _(8% completed)_
 
 | 📌 Unit Name           | Progress |
 |------------------------|----------|
-| 🔹 **C Programming**   | ![C Programming Progress](![Screenshot 2025-03-16 122656](https://github.com/user-attachments/assets/84694f8c-124d-44f8-882f-15dc45501b5c)_(40%)_ |
+| 🔹 **C Programming**   | ██████████░░░ (40%) |
 | 🔹 **Embedded C**      | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
 | 🔹 **System Architect**   | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
 | 🔹 **First Term Exam And Project**     | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
