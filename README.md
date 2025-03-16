@@ -34,5 +34,3 @@ _(8% completed)_
 | 🔹 **Soft Skills**  | ![Progress](https://progress-bar.dev/0/) _(0%)_ |
 
 
-## 📂 Repository Structure  
-
