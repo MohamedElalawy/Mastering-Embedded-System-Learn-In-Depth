@@ -22,5 +22,5 @@ int main(int argc, char **argv){
     return 0;
 }
 
-`` ``` ``
+```
 ![Screenshot 2025-03-22 174640](https://github.com/user-attachments/assets/8630615b-e584-4503-8a32-80fd52571a07)
