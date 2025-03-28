@@ -67,6 +67,24 @@ int main(int argc, char **argv){
 ![Screenshot 2025-03-28 174316](https://github.com/user-attachments/assets/1dc19101-317f-4d34-bc49-22bae7fdbd41)
 
 
+```C
+#include"stdio.h"
+
+/*EX5:*/
+int main(int argc, char **argv){
+	char c;
+	printf("Enter a character: ");
+	fflush(stdin);fflush(stdout);
+	scanf("%c",&c);
+	printf("ASCII value of %c = %i",c,c);
+
+	return 0;
+}
+```
+![Screenshot 2025-03-28 174646](https://github.com/user-attachments/assets/fe550e8a-13d3-4806-bc2e-ade40e6293bf)
+
+
+
 
 
 
