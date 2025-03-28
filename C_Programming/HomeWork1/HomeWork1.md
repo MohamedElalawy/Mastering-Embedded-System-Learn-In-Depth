@@ -84,7 +84,66 @@ int main(int argc, char **argv){
 ![Screenshot 2025-03-28 174646](https://github.com/user-attachments/assets/fe550e8a-13d3-4806-bc2e-ade40e6293bf)
 
 
+```C
+#include"stdio.h"
 
+/*EX6 Swapping method1 with temp var:*/
+int main(int argc, char **argv){
+	int a,b,t;
+	printf("Enter value of a and b : ");
+	fflush(stdin);fflush(stdout);
+	scanf("%i %i",&a,&b);
+	t = a;
+	a=b;
+	b=t;
+
+	printf("After swapping, value of a = %i\n",a);
+	printf("After swapping, value of b = %i\n",b);
+
+	return 0;
+}
+```
+![Screenshot 2025-03-28 175504](https://github.com/user-attachments/assets/082542bc-d70e-4165-931e-75ede7ff087c)
+
+```C
+#include"stdio.h"
+
+/*EX7 Swapping method2 without temp var:*/
+int main(int argc, char **argv){
+	int a,b;
+	printf("Enter value of a and b : ");
+	fflush(stdin);fflush(stdout);
+	scanf("%i %i",&a,&b);
+	a = a+b;
+	b = a-b;
+	a= a-b;
+	printf("After swapping, value of a = %i\n",a);
+	printf("After swapping, value of b = %i\n",b);
+
+	return 0;
+}
+```
+![Screenshot 2025-03-28 175904](https://github.com/user-attachments/assets/d04ab12d-ad6f-43ef-bdb2-615cb75e1164)
+
+
+```C
+#include"stdio.h"
+/*EX7 Swapping method3 without temp var:*/
+int main(int argc, char **argv){
+	int a,b;
+	printf("Enter value of a and b : ");
+	fflush(stdin);fflush(stdout);
+	scanf("%i %i",&a,&b);
+	a = a^b;
+	b = a^b;
+	a= a^b;
+	printf("After swapping, value of a = %i\n",a);
+	printf("After swapping, value of b = %i\n",b);
+
+	return 0;
+}
+```
+![Screenshot 2025-03-28 180419](https://github.com/user-attachments/assets/37e7b7bc-1cc6-4501-bbfd-b18b52b5eeac)
 
 
 
