@@ -50,4 +50,23 @@ int main(int argc, char **argv){
 ![Screenshot 2025-03-28 173707](https://github.com/user-attachments/assets/8378df4a-e87e-4b6e-9575-e1c1a9bdaabb)
 
 
+```C
+#include"stdio.h"
+
+/*EX4:*/
+int main(int argc, char **argv){
+	float i,j;
+	printf("Enter two numbers: ");
+	fflush(stdin);fflush(stdout);
+	scanf("%f %f",&i,&j);
+	printf("Product: %f",i*j);
+
+	return 0;
+}
+```
+![Screenshot 2025-03-28 174316](https://github.com/user-attachments/assets/1dc19101-317f-4d34-bc49-22bae7fdbd41)
+
+
+
+
 
