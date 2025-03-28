@@ -33,5 +33,21 @@ int main(int argc, char **argv){
 ```
 ![Screenshot 2025-03-28 173021](https://github.com/user-attachments/assets/f313a18f-8893-460d-becc-190433e73b5f)
 
+```C
+#include"stdio.h"
+
+/*EX3:*/
+int main(int argc, char **argv){
+	int i,j;
+	printf("Enter Two Integers: ");
+	fflush(stdin);fflush(stdout);
+	scanf("%i %i",&i,&j);
+	printf("Sum: %i",i+j);
+
+	return 0;
+}
+```
+![Screenshot 2025-03-28 173707](https://github.com/user-attachments/assets/8378df4a-e87e-4b6e-9575-e1c1a9bdaabb)
+
 
 
