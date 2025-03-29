@@ -163,3 +163,42 @@ int main(int argc, char **argv){
 ```
 ![Screenshot 2025-03-30 001016](https://github.com/user-attachments/assets/ce71dc87-256e-45cf-af8d-314827de3ff6)
 
+```C
+#include"stdio.h"
+/*EX8: Calculator:*/
+int main(int argc, char **argv) {
+	char op;
+	float a, b;
+	printf("Enter operator either + or - or * or / : ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%c", &op);
+	printf("Enter two operands: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%f %f", &a, &b);
+	switch (op) {
+		case '+':
+			printf("%.2f + %.2f = %.2f\n", a, b, a + b);
+			break;
+		case '-':
+			printf("%.2f - %.2f = %.2f\n", a, b, a - b);
+			break;
+		case '*':
+			printf("%.2f * %.2f = %.2f\n", a, b, a * b);
+			break;
+		case '/':
+			if (b != 0)
+				printf("%.2f / %.2f = %.2f\n", a, b, a / b);
+			else
+				printf("Error! Division by zero.\n");
+			break;
+		default:
+			printf("Invalid operator.\n");
+	}
+
+	return 0;
+}
+```
+![Screenshot 2025-03-30 002503](https://github.com/user-attachments/assets/f4a7fea2-dccd-4116-925e-683d5679c5e5)
+
