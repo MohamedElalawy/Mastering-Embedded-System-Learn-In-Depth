@@ -69,5 +69,97 @@ int main(int argc, char **argv){
 
 
 ```C
+#include"stdio.h"
+/*EX4: positive or negative or zero:*/
+int main(int argc, char **argv){
+	float a;
+	printf("Enter a Number: ");
+	fflush(stdin);fflush(stdout);
+	scanf("%f",&a);
+	printf("%0.2f ",a);
+    if (a>0) {
+        printf("is Positive\n");
+    }
+    else if (a<0) {
+        printf("is Negative\n");
+    }
+    else {
+        printf("is zero\n");
+    }
 
+	return 0;
+}
+```
+![Screenshot 2025-03-29 225340](https://github.com/user-attachments/assets/b780ca18-2785-41fa-a6fd-654c6ed44756)
+
+
+```C
+#include"stdio.h"
+/*EX5: Alphabet or not:*/
+int main(int argc, char **argv){
+		char a;
+		printf("Enter a character: ");
+		fflush(stdin);fflush(stdout);
+		scanf("%c",&a);
+		printf("%c ",a);
+		if ((a>=65 && a<=90)||(a>=97 && a<=122) ) {
+			printf("is an alphabet\n");
+		}
+		else {
+			printf("is not alphabet\n");
+		}
+
+	return 0;
+}
+```
+![Screenshot 2025-03-29 235316](https://github.com/user-attachments/assets/dc017412-881f-4f6e-b56c-705ae6d140d0)
+
+```C
+#include"stdio.h"
+/*EX6: sum of natural numbers:*/
+int main(int argc, char **argv){
+		int a;
+		printf("Enter an integer: ");
+		fflush(stdin);fflush(stdout);
+		scanf("%i",&a);
+		int i=a;
+		while (i){
+			i--;
+			a+=i;
+		}
+		printf("sum = %i ",a);
+
+
+	return 0;
+}
+```
+![Screenshot 2025-03-29 235929](https://github.com/user-attachments/assets/03214c67-a7a9-47f5-8d20-57aa5aa69887)
+
+```C
+#include"stdio.h"
+/*EX7: sum of natural numbers:*/
+int main(int argc, char **argv){
+		int a,f=1;
+		printf("Enter an integer: ");
+		fflush(stdin);fflush(stdout);
+		scanf("%i",&a);
+		if(a==0){
+			printf("Factorial = %i \n",1);
+		}
+		else if(a<0){
+			printf("Error!!!! Factorial for negative number doesn't exist.\n");
+
+		}
+		else{
+			while (a){
+
+				f*=a;
+				a--;
+			}
+			printf("Factorial = %i ",f);
+		}
+	return 0;
+}
+```
+![Screenshot 2025-03-30 001016](https://github.com/user-attachments/assets/ce71dc87-256e-45cf-af8d-314827de3ff6)
 
