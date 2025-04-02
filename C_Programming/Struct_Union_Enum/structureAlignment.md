@@ -141,7 +141,7 @@ struct Sdata {
 | 10 - 11 | **Padding** | 2 bytes | To align struct to the largest type (4 bytes) |
 | **Total** | - | **12 bytes** |
 
-![unnamed](https://github.com/user-attachments/assets/2ab56540-5f30-4ea5-b051-66451c809fde)
+![unnamed (1)](https://github.com/user-attachments/assets/e6c886ef-34be-4dc0-a544-e89e74d9cdf5)
 
 ### **Why Padding Occurs?**
 1. `data2` (4 bytes) must start at an address multiple of 4 → **Padding added after `data1`**.
