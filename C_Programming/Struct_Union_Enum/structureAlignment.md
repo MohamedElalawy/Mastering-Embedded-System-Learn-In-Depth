@@ -140,9 +140,9 @@ struct Sdata {
 | 9      | `data4`  | 2 bytes | Stored at offset 9 |
 | 10 - 11 | **Padding** | 2 bytes | To align struct to the largest type (4 bytes) |
 | **Total** | - | **12 bytes** |
-```
+
 ![unnamed](https://github.com/user-attachments/assets/2ab56540-5f30-4ea5-b051-66451c809fde)
-```
+
 ### **Why Padding Occurs?**
 1. `data2` (4 bytes) must start at an address multiple of 4 → **Padding added after `data1`**.
 2. `data4` (2 bytes) is placed at offset **9**, but for memory efficiency, struct size is rounded to a multiple of the largest type (4 bytes) → **Padding added at the end**.
