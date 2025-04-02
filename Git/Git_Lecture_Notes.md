@@ -1,6 +1,6 @@
 
 
-# This file contains my notes from the **Version Control Systems (VCS) lecture** in the **Mastering Embedded System Diploma by Learn In Depth**.  
+# This file contains my notes from **Version Control Systems (VCS) lecture** in  **Mastering Embedded System Diploma by Learn In Depth**.  
 
 In this lecture, we explored the fundamentals of version control, with a strong focus on **Git**. The notes include **screenshots from our practice sessions** along with **explanations** of key commands and concepts. From initializing repositories to branching, merging, and handling commits, these notes serve as a structured reference for working with Git efficiently.  
 
