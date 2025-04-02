@@ -128,6 +128,8 @@ struct Sdata {
 | `data3`  | `unsigned char`  | 1 byte |
 | `data4`  | `unsigned short` | 2 bytes |
 | **Total** | - | **1 + 4 + 1 + 2 = 8 bytes** |
+![unnamed](https://github.com/user-attachments/assets/2ab56540-5f30-4ea5-b051-66451c809fde)
+
 
 ### **Actual (With Padding)**
 | Offset | Variable | Size | Notes |
@@ -175,7 +177,7 @@ This will help you understand why the size is larger than expected and how to op
 ```
 ![Screenshot 2025-04-02 235557](https://github.com/user-attachments/assets/cf7d457f-ad9b-40d8-ae85-2bff5af5ff02)
 
-Assemply level explanation:
+## **Assemply level explanation: **
 To understand why padding occurs in structs at the **assembly level**, let's analyze how the **ARM compiler** generates store instructions for different data types.
 
 ---
