@@ -1,3 +1,5 @@
+![Screenshot 2025-04-02 221152](https://github.com/user-attachments/assets/af0ba245-e455-4b80-ac62-413cc36700d9)
+
 The reason why `sizeof(struct SData)` is **8** instead of **5** is due to **struct padding and alignment**.
 
 ### **Explanation:**
@@ -57,4 +59,3 @@ Now, `sizeof(struct SData)` should return **5**.
 
 ⚠️ **Note:** Disabling padding may impact performance due to unaligned memory access.
 
-![Screenshot 2025-04-02 221152](https://github.com/user-attachments/assets/af0ba245-e455-4b80-ac62-413cc36700d9)
