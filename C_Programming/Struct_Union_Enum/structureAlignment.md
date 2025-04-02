@@ -175,3 +175,120 @@ This will help you understand why the size is larger than expected and how to op
 ```
 ![Screenshot 2025-04-02 235557](https://github.com/user-attachments/assets/cf7d457f-ad9b-40d8-ae85-2bff5af5ff02)
 
+Assemply level explanation:
+To understand why padding occurs in structs at the **assembly level**, let's analyze how the **ARM compiler** generates store instructions for different data types.
+
+---
+
+## **ARM Store Instructions for Different Data Types**
+ARM has different **store instructions** for different data sizes:
+- **`STR`** (Store Register) → Stores a **32-bit** word (4 bytes).
+- **`STRH`** (Store Halfword) → Stores a **16-bit** halfword (2 bytes).
+- **`STRB`** (Store Byte) → Stores an **8-bit** byte.
+
+---
+
+## **Assembly Analysis of Struct Memory Layout**
+Given the following struct:
+```c
+struct Sdata {
+    unsigned char data1;  // 1 byte
+    unsigned int data2;   // 4 bytes
+    unsigned char data3;  // 1 byte
+    unsigned short data4; // 2 bytes
+};
+```
+### **Memory Layout and Store Instructions**
+| Offset | Variable  | Size | Instruction Used | Explanation |
+|--------|----------|------|-----------------|-------------|
+| **0**  | `data1`  | 1B   | `STRB R0, [R1]` | Store `data1` (byte) at offset 0 |
+| **1-3** | **Padding** | 3B | (Not stored explicitly) | Added for `data2` alignment |
+| **4-7** | `data2`  | 4B   | `STR R2, [R1, #4]` | Store `data2` (word) at offset 4 |
+| **8**  | `data3`  | 1B   | `STRB R3, [R1, #8]` | Store `data3` (byte) at offset 8 |
+| **9**  | `data4`  | 2B   | `STRH R4, [R1, #9]` | Store `data4` (halfword) at offset 9 |
+| **10-11** | **Padding** | 2B | (Not stored explicitly) | Added for struct alignment |
+
+---
+
+## **Generated ARM Assembly**
+If we compile with `-O0` (no optimizations), we might see something like:
+
+```assembly
+; R1 = address of struct Sdata
+MOV R0, #0xAA        ; data1 = 0xAA
+STRB R0, [R1]        ; Store byte at offset 0
+
+MOV R2, #0xFFFFFFFF  ; data2 = 0xFFFFFFFF
+STR R2, [R1, #4]     ; Store word at offset 4
+
+MOV R3, #0x55        ; data3 = 0x55
+STRB R3, [R1, #8]    ; Store byte at offset 8
+
+MOV R4, #0xA5A5      ; data4 = 0xA5A5
+STRH R4, [R1, #9]    ; Store halfword at offset 9
+```
+- **Notice the padding!**
+  - The compiler **does not generate instructions for the padding bytes**.
+  - But padding is **reserved in memory** to maintain alignment.
+
+---
+
+## **Why Does Padding Occur?**
+1. **Alignment Rules in ARM**
+   - `int` (4B) → Must be stored at an **address multiple of 4**.
+   - `short` (2B) → Must be stored at an **address multiple of 2**.
+   - `char` (1B) → Can be stored anywhere.
+
+2. **Performance Optimization**
+   - ARM CPUs **load/store words faster** when aligned to **natural boundaries**.
+   - Misaligned access can be **slower or even cause faults** on some systems.
+
+---
+
+## **How to Remove Padding?**
+### **Rearrange Struct Members**
+If we reorder:
+```c
+struct Sdata {
+    unsigned int data2;   // 4B
+    unsigned short data4; // 2B
+    unsigned char data1;  // 1B
+    unsigned char data3;  // 1B
+};
+```
+New Memory Layout:
+| Offset | Variable  | Size | Instruction |
+|--------|----------|------|-------------|
+| 0-3    | `data2`  | 4B   | `STR` |
+| 4-5    | `data4`  | 2B   | `STRH` |
+| 6      | `data1`  | 1B   | `STRB` |
+| 7      | `data3`  | 1B   | `STRB` |
+
+Now, **no extra padding** → **size reduced to 8 bytes**!
+
+---
+
+### **Packing Structs (`#pragma pack(1)`)**
+Another way is **forcing no padding**:
+```c
+#pragma pack(1)
+struct Sdata {
+    unsigned char data1;
+    unsigned int data2;
+    unsigned char data3;
+    unsigned short data4;
+};
+#pragma pack()
+```
+- This **removes padding**, but:
+  - The compiler may **generate extra instructions** to handle misaligned access.
+  - May **reduce performance** on ARM.
+
+---
+
+## **Conclusion**
+- ARM **STR, STRH, STRB** instructions are responsible for storing different data sizes.
+- Struct padding happens due to **alignment rules** for better performance.
+- You can **optimize struct layout** or use **`#pragma pack(1)`** to reduce size at the cost of performance.
+
+ **Best practice?** **Rearrange struct members** to minimize padding **instead of forcing packing**! 
