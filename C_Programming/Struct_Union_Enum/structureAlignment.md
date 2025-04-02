@@ -58,4 +58,6 @@ struct SData {
 Now, `sizeof(struct SData)` should return **5**.
 
 ⚠️ **Note:** Disabling padding may impact performance due to unaligned memory access.
+![Screenshot 2025-04-02 222039](https://github.com/user-attachments/assets/0562a2fe-3bcb-4f74-82ad-cd1e97dabca7)
+
 
