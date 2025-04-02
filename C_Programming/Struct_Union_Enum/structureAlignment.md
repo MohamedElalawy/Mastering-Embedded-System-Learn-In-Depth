@@ -171,4 +171,7 @@ struct Sdata {
 ⚠️ **Note:** Removing padding may cause **performance issues** on some architectures.
 ```
 
-This will help you understand why the size is larger than expected and how to optimize it. 🚀
+This will help you understand why the size is larger than expected and how to optimize it.
+```
+![Screenshot 2025-04-02 235557](https://github.com/user-attachments/assets/cf7d457f-ad9b-40d8-ae85-2bff5af5ff02)
+
