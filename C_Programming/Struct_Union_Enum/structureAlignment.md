@@ -171,6 +171,8 @@ struct Sdata {
 };
 #pragma pack()
 ```
+![unnamed (2)](https://github.com/user-attachments/assets/8dfffed0-a5bd-460e-8973-fb0adfd588f7)
+
 ⚠️ **Note:** Removing padding may cause **performance issues** on some architectures.
 ```
 
