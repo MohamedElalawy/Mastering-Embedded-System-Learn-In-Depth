@@ -1,5 +1,4 @@
 ![Screenshot 2025-04-03 020623](https://github.com/user-attachments/assets/aac539d7-98e8-440e-b1c7-6dcfef447038)
-Here's the corrected and properly formatted code from the image:
 
 ```c
 #include <stdio.h>
