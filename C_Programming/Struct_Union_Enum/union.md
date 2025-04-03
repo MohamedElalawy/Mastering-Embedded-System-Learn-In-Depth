@@ -126,3 +126,4 @@ double: 821.800000 + 988.200000 = 1810.000000
 ```
 
 This approach is particularly useful in scenarios where you need to handle different data types in a memory-efficient way, such as in embedded systems or when working with variant data.
+
