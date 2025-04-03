@@ -40,7 +40,7 @@ int main() {
 
 
 
-Here's the complete corrected and formatted code from the images, along with an explanation of the benefits of using a union in this context:
+example to explain the benefits of using a union :
 
 ```c
 #include <stdio.h>
