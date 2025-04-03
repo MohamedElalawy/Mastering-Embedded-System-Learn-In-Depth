@@ -26,7 +26,56 @@ In C, an `enum` type is typically the size of an `int`. On most modern systems, 
    - `today = wednesday` assigns the value `3` to `today`.
    - `today + 1` evaluates to `4`, so the output is `Day 4`.
 - The size of the enum variable (`today`) is the size of an `int` because enums are essentially integers in C.
+Here’s the corrected and annotated version of the code from the image, along with a clear explanation of why enums are used in C (especially for flags):
 
+---
+
+### **Code Example: Enums for Bitmask Flags**
+```c
+#include <stdio.h>
+
+// Define enum constants as bit flags (powers of 2)
+enum designFlags {
+    BOLD = 1,      // Binary: 00000001
+    ITALICS = 2,   // Binary: 00000010
+    UNDERLINE = 4  // Binary: 00000100
+};
+
+int main() {
+    // Combine flags using bitwise OR (|)
+    int myDesign = BOLD | UNDERLINE; // 00000101 (decimal 5)
+    printf("%d", myDesign); // Output: 5
+    return 0;
+}
+```
+
+### **Output**
+```
+5
+```
+### **Quiz: Enums and Bitmasking**
+**Question 1:** What is the value of `ITALICS | UNDERLINE`?  
+**Answer:** `6` (binary `00000110`).  
+
+**Question 2:** How would you check if `myDesign` has `BOLD` enabled?  
+**Answer:**  
+```c
+if (myDesign & BOLD) { 
+    printf("Bold is ON!"); 
+}
+```
+
+**Question 3:** What does `printf("%d", BOLD | ITALICS | UNDERLINE);` output?  
+**Answer:** `7` (binary `00000111`).  
+
+---
+
+### **When to Use Enums?**
+- **Flags/Options:** Combining multiple options (e.g., file permissions, UI styles).  
+- **Fixed Categories:** Days, states, error codes.  
+- **Replace Macros:** Cleaner than `#define BOLD 1`.  
+
+Enums make your code **intent-revealing** while maintaining efficiency. 
 
 ### **C Enum Quiz (with Answers)**  
 Test your understanding of enums in C with these questions. Assume all code is compiled and run in a standard C environment.
