@@ -123,5 +123,26 @@ int main() {
     return 0;
 }
 ```
+
+
+# Difference between union and structure
+
+The primary difference can be demonstrated by this example:
 ![Screenshot 2025-04-06 062509](https://github.com/user-attachments/assets/31ea91c5-1c2d-43bf-b138-f2a6f251046e)
 
+### 1. Memory Allocation  
+- **Structures** allocate more memory than unions.  
+  - Memory required for a structure = sum of memory sizes of all members.  
+- **Unions** allocate memory equal to their largest member.  
+  - Memory required for a union = memory needed for its largest element.  
+
+For a **structure**, total memory = 32 + 4 + 4 = **40 bytes**.  
+For a **union**, memory = largest member (`name`) = **32 bytes**.  
+
+### 2. Member Access  
+- In a **union**, only one member can be accessed at a time (shared memory space).  
+- In a **structure**, all members can be accessed independently (dedicated memory for each).  
+
+--- 
+- **Unions** save memory but restrict simultaneous access to members.  
+- **Structures** use more memory but allow flexible member access.
