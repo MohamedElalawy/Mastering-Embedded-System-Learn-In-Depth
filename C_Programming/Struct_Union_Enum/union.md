@@ -100,7 +100,7 @@ int main() {
 
 ![Screenshot 2025-04-06 055441](https://github.com/user-attachments/assets/a14c1ac2-6a30-43a9-a461-970271e12df8)
 
-## **the key difference between unions and structures
+## The key difference between unions and structures
 ```c
 #include <stdio.h>
 
