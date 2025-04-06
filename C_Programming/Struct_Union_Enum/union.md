@@ -100,31 +100,4 @@ int main() {
 }
 ```
 
-### Benefits of Using a Union in This Code:
-
-1. **Memory Efficiency**:
-   - The union only allocates enough memory for the largest member (8 bytes for `double`), rather than allocating separate memory for each type.
-   - This is more memory-efficient than using a struct, which would allocate space for all members (4 + 4 + 8 = 16 bytes).
-
-2. **Flexible Data Representation**:
-   - The same memory space can be used to store different types of data (`int`, `float`, or `double`) at different times.
-   - This is useful when a variable might need to hold different types of data during program execution.
-
-3. **Type-Safe Operations**:
-   - The `enum NUMType` ensures that operations are performed on the correct type, preventing misuse of the union.
-   - The `Add` function uses the enum to determine which type of addition to perform.
-
-4. **Cleaner Code**:
-   - The union provides a single variable (`UNUMValue`) that can handle multiple data types, making the code more organized and easier to maintain.
-
-### Output Example:
-```
-The size of UNUMValue is 8 bytes
-
-int: 9898 + 8776 = 18674
-float: 86.820000 + 83.110001 = 169.930000
-double: 821.800000 + 988.200000 = 1810.000000
-```
-
-This approach is particularly useful in scenarios where you need to handle different data types in a memory-efficient way, such as in embedded systems or when working with variant data.
-
+![Screenshot 2025-04-06 055441](https://github.com/user-attachments/assets/a14c1ac2-6a30-43a9-a461-970271e12df8)
