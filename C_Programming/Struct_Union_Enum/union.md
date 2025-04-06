@@ -29,15 +29,11 @@ int main() {
 
 - **Memory Overlap**: All members (`intValue`, `floatValue`, `doubleValue`) share the same memory space (size = 8 bytes, the largest member).
 - **Overwrite Behavior**: Writing to `intValue` corrupts `doubleValue` because they overlap.
-- **Output**:  
-   ```
-   Initial doubleValue: 3.141590  
-   After intValue = 42:  
-   intValue: 42  
-   doubleValue (corrupted): garbage value  
-   ```
+
 
 ![Screenshot 2025-04-06 055135](https://github.com/user-attachments/assets/ebc4bfeb-9095-4ed5-b8ea-df3b101a0e91)
+
+![Screenshot 2025-04-06 055703](https://github.com/user-attachments/assets/0fbf91de-1ebf-4da8-b928-5d364e18d02e)
 
 
 
