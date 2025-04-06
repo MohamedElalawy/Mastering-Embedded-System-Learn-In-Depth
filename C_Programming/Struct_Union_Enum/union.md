@@ -99,3 +99,29 @@ int main() {
 ```
 
 ![Screenshot 2025-04-06 055441](https://github.com/user-attachments/assets/a14c1ac2-6a30-43a9-a461-970271e12df8)
+
+## **the key difference between unions and structures
+```c
+#include <stdio.h>
+
+union unionJob {
+    //defining a union
+    char name[32];
+    float salary;
+    int workerNo;
+} uJob;
+
+struct structJob {
+    char name[32];
+    float salary;
+    int workerNo;
+} sJob;
+
+int main() {
+    printf("size of union = %d", sizeof(uJob));
+    printf("\nsize of structure = %d", sizeof(sJob));
+    return 0;
+}
+```
+![Screenshot 2025-04-06 062509](https://github.com/user-attachments/assets/31ea91c5-1c2d-43bf-b138-f2a6f251046e)
+
