@@ -1,4 +1,3 @@
-**Bash** and **C** that does the same task — for example, summing numbers from 1 to 1,000,000 — and then measure the time it takes for each:
 
 ---
 
@@ -52,5 +51,4 @@ echo | awk -v s="$start" -v e="$end" '{ printf("Bash Script: Time taken = %.6f s
 ```
 ![Screenshot 2025-04-06 074301](https://github.com/user-attachments/assets/a15fa3cc-9aa2-4a7b-9c6e-c6cfd9bf18c5)
 
-### 📊 **Expected Result**
-You’ll likely see the C code is **much faster** due to being compiled and lower-level, while Bash will be **significantly slower** due to interpreted execution and shell arithmetic.
+C code is **much faster**
