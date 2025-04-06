@@ -39,7 +39,8 @@ int main() {
 
 
 example to explain the benefits of using a union :
-
+This code demonstrates how to use a union and an enum to handle arithmetic operations on different numeric types (int, float, double) with a single function.
+Using a union allows storing different types in the same memory space, saving memory when only one type is used at a time.
 ```c
 #include <stdio.h>
 
