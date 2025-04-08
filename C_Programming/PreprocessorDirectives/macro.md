@@ -72,3 +72,30 @@ The `##` operator before `__VA_ARGS__` is a GNU extension that removes the prece
 
 ![Screenshot 2025-04-08 193449](https://github.com/user-attachments/assets/c83fafd6-23b0-4c3e-9b85-4530bccf60ba)
 
+## advanced macro techniques
+```C
+#include <stdio.h>
+
+#define CAT(a, ...) PRIMITIVE_CAT(a, __VA_ARGS__)
+#define PRIMITIVE_CAT(a, ...) a ## __VA_ARGS__
+
+#define DEC(x) PRIMITIVE_CAT(DEC_, x)
+#define DEC_0 0
+#define DEC_1 0
+#define DEC_2 1
+#define DEC_3 2
+#define DEC_4 3
+#define DEC_5 4
+#define DEC_6 5
+#define DEC_7 6
+#define DEC_8 7
+#define DEC_9 8
+
+#define Dprintf(...) printf(__VA_ARGS__)
+
+int main(int argc, char** argv) {
+    Dprintf("DEC(7)=%d\n", DEC(7));
+    return 0;
+}
+```
+![Screenshot 2025-04-08 194106](https://github.com/user-attachments/assets/a01505ca-0f61-47e9-ba38-90c8fb8dcdc9)
