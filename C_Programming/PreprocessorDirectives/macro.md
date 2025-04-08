@@ -66,3 +66,7 @@ int main(int argc, char**argv){
 ```
 
 The `##` operator before `__VA_ARGS__` is a GNU extension that removes the preceding comma if no variable arguments are supplied.
+
+![Screenshot 2025-04-08 192323](https://github.com/user-attachments/assets/36e9806b-3189-4b74-9ca4-c1df5c189e2d)
+
+
