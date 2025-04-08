@@ -120,7 +120,7 @@ Solution:
 ```C
 #include <stdio.h>  
 
-#define Dprintf(...).printf (#__VA_ARGS__)  
+#define Dprintf(...) printf(#__VA_ARGS__)  
 
 int main(int argc, char** argv) {
     Dprintf("DEC(7)-%d", DEC(7));  
