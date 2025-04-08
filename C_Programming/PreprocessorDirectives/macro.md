@@ -99,3 +99,33 @@ int main(int argc, char** argv) {
 }
 ```
 ![Screenshot 2025-04-08 194106](https://github.com/user-attachments/assets/a01505ca-0f61-47e9-ba38-90c8fb8dcdc9)
+
+## Interview question:
+How to solve the following problems in single modification to pass the compilation?
+```C
+#include <stdio.h> 
+#define Dprintf(...) printf(__VA_ARGS__)  
+
+int main(int argc, char** argv) {
+    // ❌ ERROR: 'DEC' is implicitly declared (undefined macro/function)
+    Dprintf("DEC(7)-%d", DEC(7));  
+
+    // ❌ ERROR: 'Dprintf()' expands to 'printf()' → too few arguments
+    Dprintf();  
+}
+```
+![Screenshot 2025-04-08 195800](https://github.com/user-attachments/assets/c999c013-03d3-4ec0-a62a-faff650ed12a)
+
+Solution:
+```C
+#include <stdio.h>  
+
+#define Dprintf(...).printf (#__VA_ARGS__)  
+
+int main(int argc, char** argv) {
+    Dprintf("DEC(7)-%d", DEC(7));  
+    Dprintf();  
+}
+```
+![Screenshot 2025-04-08 195921](https://github.com/user-attachments/assets/835e69e3-ce4f-4e7c-894e-6f87fd674083)
+
