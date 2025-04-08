@@ -23,3 +23,46 @@ int main(int argc, char**argv){
 ```
 
 ![Screenshot 2025-04-07 072050](https://github.com/user-attachments/assets/98f5f6bf-1b5d-4311-8bc8-8fa89ac6996d)
+
+
+```
+```
+# Variable argument macros 
+
+
+## Two Forms of Variadic Macros
+
+1. **With named parameters plus variable arguments**:
+   ```c
+   #define identifier(parameters, ...) replacement-list
+   ```
+   - This form takes some named parameters followed by `...` for variable arguments
+   - Access variable arguments with `__VA_ARGS__` in the replacement list
+
+2. **Variable arguments only**:
+   ```c
+   #define identifier(...) replacement-list
+   ```
+   - This form takes only variable arguments (no named parameters)
+   - Still access with `__VA_ARGS__`
+
+## Key Points
+
+- `__VA_ARGS__` expands to all the variable arguments passed to the macro
+- The `##` operator can be used for token concatenation with `__VA_ARGS__`
+- This is commonly used for printf-style debugging macros or flexible macros
+
+## Example Usage
+
+```c
+// Form 3 example
+#define LOG(msg, ...) printf(msg, __VA_ARGS__)
+
+// Form 4 example
+#define DEBUG(...) printf(__VA_ARGS__)
+
+// With token concatenation
+#define ERROR(fmt, ...) fprintf(stderr, "Error: " fmt, ##__VA_ARGS__)
+```
+
+The `##` operator before `__VA_ARGS__` is a GNU extension that removes the preceding comma if no variable arguments are supplied.
