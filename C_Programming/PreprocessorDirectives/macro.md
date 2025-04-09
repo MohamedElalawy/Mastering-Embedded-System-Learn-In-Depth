@@ -174,3 +174,6 @@ int main(int argc, char** argv) {
 
 ``
 ![Screenshot 2025-04-09 061937](https://github.com/user-attachments/assets/20c245c7-e5e7-43c2-ba20-7e8dbb9dfa69)
+
+
+## Quiz: Think how to write a code can be Removed or added to the Embedded C Program and Responsible on print Debug with Details
