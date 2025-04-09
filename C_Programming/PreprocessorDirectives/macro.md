@@ -262,3 +262,6 @@ done
 
 echo "DPRINTF inserted at the end of functions."
 ```
+![Screenshot 2025-04-09 190642](https://github.com/user-attachments/assets/43b89904-e341-4580-9ced-c74ff7143bf9)
+
+![Screenshot 2025-04-09 190707](https://github.com/user-attachments/assets/b83b31bd-09b6-4fd4-ad38-779d86ba430c)
