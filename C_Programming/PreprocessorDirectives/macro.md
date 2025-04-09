@@ -158,3 +158,30 @@ int main(int argc, char** argv) {
 
 
 ![Screenshot 2025-04-09 060623](https://github.com/user-attachments/assets/e412d381-a329-4e65-ac59-7f043761b155)
+
+
+## Predefined macros
+
+| **Macro**             | **Description**                                                                                                                                               |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `__STDC__`            | Expands to the integer constant `1`. Indicates a conforming implementation.                                                                                   |
+| `__STDC_VERSION__`    | Expands to an integer constant of type `long` for the C standard version:<br>- `199409L` (C95)<br>- `199901L` (C99)<br>- `201112L` (C11)                      |
+| `__STDC_HOSTED__`     | Expands to `1` if hosted (runs under OS), or `0` if freestanding (runs without OS).                                                                           |
+| `__FILE__`            | Expands to the name of the current file as a string literal. Can be changed using `#line` directive.                                                          |
+| `__LINE__`            | Expands to the line number in the source file as an integer. Can be changed using `#line` directive.                                                          |
+| `__DATE__`            | Expands to the date of translation as `"Mmm dd yyyy"`. Uses `asctime` style, and a space precedes single-digit days.                                          |
+| `__TIME__`            | Expands to the time of translation as `"hh:mm:ss"`, in `asctime` format.                                                                                      |
+
+
+```C
+#include <stdio.h>
+
+int main() {
+    printf("File: %s\n", __FILE__);
+    printf("Line: %d\n", __LINE__);
+    printf("Compiled on: %s at %s\n", __DATE__, __TIME__);
+    printf("C Standard: %ld\n", __STDC_VERSION__);
+    return 0;
+}
+```
+![Screenshot 2025-04-09 061451](https://github.com/user-attachments/assets/f8a5bf88-3151-4942-866d-994108b17a70)
