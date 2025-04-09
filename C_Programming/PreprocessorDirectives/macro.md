@@ -177,3 +177,34 @@ int main(int argc, char** argv) {
 
 
 ## Quiz: Think how to write a code can be Removed or added to the Embedded C Program and Responsible on print Debug with Details
+```C
+#include <stdio.h>
+
+#define DPRINTF(debug_level, ...) \
+    if (debug_level > 1) { \
+        printf("@ Func: %s, File: %s, Line: %d ", __func__, __FILE__, __LINE__); \
+        printf(">> \t"); \
+        printf(__VA_ARGS__); \
+    }
+
+void CAN_Send()
+{
+    DPRINTF(3, "Sending CAN message\n");
+}
+
+void can_init()
+{
+    DPRINTF(3, "Initializing CAN module\n");
+}
+
+int main()
+{
+    DPRINTF(3, "Program started\n");
+    can_init();
+    CAN_Send();
+    DPRINTF(3, "Program completed\n");
+
+    return 0;
+}
+```
+![Screenshot 2025-04-09 071555](https://github.com/user-attachments/assets/e024e02a-0b18-41d0-9bcc-1f470baab15b)
