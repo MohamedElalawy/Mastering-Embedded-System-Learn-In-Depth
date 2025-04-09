@@ -1,11 +1,20 @@
 ## macro definition:
 ```C
+#define debug
+
+#ifdef debug
+int debug_enable = 1;
+#else
+int debug_enable = 0;
+#endif
+
 #define DPRINTF(debug_level, ...) \
-    if (debug_level > 1) { \
-    DPRINTF(3, "Entered     if (debug_level > 1) { \\n");
-        printf("@ Func: %s, File: %s, Line: %d ", __func__, __FILE__, __LINE__); \
-        printf(">> \t"); \
-        printf(__VA_ARGS__); \
+    if (debug_enable) { \
+        if (debug_level == 0) { \
+            printf("%s: %s, File: %s, Line: %d ", __func__, __FILE__, __LINE__); \
+            printf(">>\t"); \
+            printf(__VA_ARGS__); \
+        } \
     }
 ```
 ## Shell script that recursively searches through all C/C++ source files in a folder (.c, .cpp, .h, .hpp), detects function definitions, and inserts a debug print using your DPRINTF macro :
