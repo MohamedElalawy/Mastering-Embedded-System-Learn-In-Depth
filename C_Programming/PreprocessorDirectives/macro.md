@@ -132,3 +132,26 @@ int main(int argc, char** argv) {
 ## #undef:
 ![Screenshot 2025-04-09 054114](https://github.com/user-attachments/assets/c7c70a2b-5f2a-4808-8329-4f9acce50941)
 
+## Trick:
+```C
+#include <stdio.h>
+
+#define FUNCTION(name, a) int fun_##name(int x) { return (a)*x; }
+
+FUNCTION(quadruple, 4)
+FUNCTION(double, 2)
+
+#undef FUNCTION
+#define FUNCTION 34
+#define OUTPUT(a) printf(#a)
+
+int main(int argc, char** argv) {
+    printf("quadruple(13): %d\n", fun_quadruple(13));
+    printf("double(21): %d\n", fun_double(21));
+    printf("%d\n", FUNCTION);
+    OUTPUT(Keroles);    
+    
+    return 0;
+}
+```
+![Screenshot 2025-04-09 055942](https://github.com/user-attachments/assets/9e4fae14-5b03-4da7-9286-88583e5de5cd)
