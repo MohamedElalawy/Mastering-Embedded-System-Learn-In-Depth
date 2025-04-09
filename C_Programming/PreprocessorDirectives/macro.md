@@ -172,16 +172,5 @@ int main(int argc, char** argv) {
 | `__DATE__`            | Expands to the date of translation as `"Mmm dd yyyy"`. Uses `asctime` style, and a space precedes single-digit days.                                          |
 | `__TIME__`            | Expands to the time of translation as `"hh:mm:ss"`, in `asctime` format.                                                                                      |
 
-
-```C
-#include <stdio.h>
-
-int main() {
-    printf("File: %s\n", __FILE__);
-    printf("Line: %d\n", __LINE__);
-    printf("Compiled on: %s at %s\n", __DATE__, __TIME__);
-    printf("C Standard: %ld\n", __STDC_VERSION__);
-    return 0;
-}
-```
-![Screenshot 2025-04-09 061451](https://github.com/user-attachments/assets/f8a5bf88-3151-4942-866d-994108b17a70)
+``
+![Screenshot 2025-04-09 061937](https://github.com/user-attachments/assets/20c245c7-e5e7-43c2-ba20-7e8dbb9dfa69)
