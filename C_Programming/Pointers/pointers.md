@@ -77,7 +77,7 @@ int main()
 ```
 ![Screenshot 2025-04-10 145825](https://github.com/user-attachments/assets/7f0904f6-e402-4855-b3fa-51a68fed49ed)
 
-## ptr to struct:
+## ptr to struct, array of structs, increment ptr by the size of struct:
 ```C
 
 #include <stdio.h>
