@@ -121,7 +121,7 @@ int main(int argc, char** argv) {
 ```
 ![Screenshot 2025-04-10 180802](https://github.com/user-attachments/assets/44111d90-529c-447d-8c16-d4eb97b0a78d)
 
-##bubble sort algorithm:
+## bubble sort algorithm:
 ```C
 void Sort(int* values /*input/output*/, int nValues /*input*/)
 {
@@ -141,7 +141,7 @@ void Sort(int* values /*input/output*/, int nValues /*input*/)
 ![Screenshot 2025-04-10 183443](https://github.com/user-attachments/assets/dda3163f-115d-482b-977b-a12b0e9452a6)
 
 
-##unkown / generic ptr (void pointer):
+## unkown / generic ptr (void pointer):
 ```C
 #include <stdio.h>
 
