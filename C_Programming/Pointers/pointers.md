@@ -34,3 +34,47 @@ void main()
 
 ```
 ![Screenshot 2025-04-10 143113](https://github.com/user-attachments/assets/e6a2cfc4-7d90-40fa-a923-1ecfdd0e5605)
+
+## ptr to struct:
+```C
+#include "stdio.h"
+
+struct SDataSet
+{
+    unsigned char data1;
+    unsigned int data2;
+    unsigned char data3;
+    unsigned short data4;
+};
+
+struct SDataSet data1;
+
+void print_memory_range(char* base, int size)
+{
+    int i;
+    for (i = 0; i < size; i++) {  
+        printf("%p \t %x \n", base, (unsigned char)*base);
+        base++;
+    }
+}
+
+int main()
+{
+    data1.data1 = 0x11;
+    data1.data2 = 0xFFFFEEEE;  
+    data1.data3 = 0x22;
+    data1.data4 = 0xABCD;
+    print_memory_range((char*)&data1, sizeof(data1));
+
+    char* p = (char*)&data1;
+    printf("p+8 = %x \n", (unsigned char)*(p+8));
+    
+    struct SDataSet *PStruct = &data1;  
+    printf("p+8 = %x \n", (unsigned char)PStruct->data3);
+
+    return 0;
+}
+```
+![Screenshot 2025-04-10 145825](https://github.com/user-attachments/assets/7f0904f6-e402-4855-b3fa-51a68fed49ed)
+
+
