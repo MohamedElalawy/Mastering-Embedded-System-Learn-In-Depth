@@ -77,4 +77,47 @@ int main()
 ```
 ![Screenshot 2025-04-10 145825](https://github.com/user-attachments/assets/7f0904f6-e402-4855-b3fa-51a68fed49ed)
 
+## ptr to struct:
+```C
+
+#include <stdio.h>
+struct SPerson {
+    char m_Name[18];
+    int m_ID;
+    char m_Age;
+    short m_Salary;
+    double m_Weight;
+};
+int main(int argc, char** argv) {
+    struct SPerson manager = {"Mohamed Hady", 163, 39, 3000, 79.5};
+    struct SPerson employees[] = {
+        {"Mostafa Saidi", 163, 30, 1500, 81.0},
+        {"Ahmed Salah", 164, 25, 1200, 91.0},
+        {"Safa Fayez", 165, 28, 1400, 65.0}
+    };
+
+    int i;
+    struct SPerson* p;
+    p = &manager;
+    printf("manager: %s, %d, %d, %d, %lf\n\n",
+        p->m_Name, p->m_ID, (int)p->m_Age,
+        (int)p->m_Salary, p->m_Weight);
+
+    p->m_Salary = 4000;
+    printf("manager: %s, %d, %d, %d, %lf\n\n",
+        manager.m_Name, manager.m_ID,
+        (int)manager.m_Age, (int)manager.m_Salary,
+        manager.m_Weight);
+
+    p = employees;
+    for (i = 0; i < sizeof(employees) / sizeof(struct SPerson); i++, p++) {
+        printf("employee %d: %s, %d, %d, %d, %lf\n\n",
+            i, p->m_Name, p->m_ID,
+            (int)p->m_Age, (int)p->m_Salary,
+            p->m_Weight);
+    }
+    return 0;
+}
+```
+![Screenshot 2025-04-10 180802](https://github.com/user-attachments/assets/44111d90-529c-447d-8c16-d4eb97b0a78d)
 
