@@ -30,7 +30,7 @@ void main()
     printf("sum = %d\n", sum);
 }
 
-![Screenshot 2025-04-10 143113](https://github.com/user-attachments/assets/e6a2cfc4-7d90-40fa-a923-1ecfdd0e5605)
 
 
 ```
+![Screenshot 2025-04-10 143113](https://github.com/user-attachments/assets/e6a2cfc4-7d90-40fa-a923-1ecfdd0e5605)
