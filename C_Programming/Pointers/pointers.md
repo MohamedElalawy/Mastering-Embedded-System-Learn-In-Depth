@@ -121,3 +121,23 @@ int main(int argc, char** argv) {
 ```
 ![Screenshot 2025-04-10 180802](https://github.com/user-attachments/assets/44111d90-529c-447d-8c16-d4eb97b0a78d)
 
+##bubble sort algorithm:
+```C
+void Sort(int* values /*input/output*/, int nValues /*input*/)
+{
+    int i, j, temp;
+    for(i = 0; i < nValues - 1; i++)
+        for(j = i; j < nValues; j++)
+            if(values[i] > values[j])
+            {
+                temp = values[i];
+                values[i] = values[j];
+                values[j] = temp;
+            }
+}
+```
+
+
+![Screenshot 2025-04-10 183443](https://github.com/user-attachments/assets/dda3163f-115d-482b-977b-a12b0e9452a6)
+
+
