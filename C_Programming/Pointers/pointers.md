@@ -163,7 +163,7 @@ int main() {
 ```
 ![Screenshot 2025-04-10 183954](https://github.com/user-attachments/assets/90d64a8f-3d51-4fcf-8fcf-ee6a00c8887f)
 
-## Universal Conarison function:
+## Universal compare function using void pointers:
 ```C
 #include <stdio.h>
 int Compare(void* value1, void* value2, int type) 
