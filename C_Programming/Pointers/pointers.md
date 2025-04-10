@@ -141,3 +141,24 @@ void Sort(int* values /*input/output*/, int nValues /*input*/)
 ![Screenshot 2025-04-10 183443](https://github.com/user-attachments/assets/dda3163f-115d-482b-977b-a12b0e9452a6)
 
 
+##unkown / generic ptr (void pointer):
+```C
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+    double y = 10.3;
+    void* p;
+
+    p = &x;
+    *(int*)p = 8;
+    printf("x = %d\n", x);
+
+    p = &y;
+    *(double*)p = 3.3;
+    printf("y = %lf\n", y);
+
+    return 0;
+}
+```
+![Screenshot 2025-04-10 183954](https://github.com/user-attachments/assets/90d64a8f-3d51-4fcf-8fcf-ee6a00c8887f)
