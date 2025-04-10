@@ -162,3 +162,46 @@ int main() {
 }
 ```
 ![Screenshot 2025-04-10 183954](https://github.com/user-attachments/assets/90d64a8f-3d51-4fcf-8fcf-ee6a00c8887f)
+
+## Universal Conarison function:
+```C
+#include <stdio.h>
+int Compare(void* value1, void* value2, int type) 
+{
+    int r;
+    switch(type)
+    {
+        case 1: // Integer comparison
+            if(*(int*)value1 == *(int*)value2) r = 0;
+            else if(*(int*)value1 > *(int*)value2) r = 1;
+            else r = -1;
+            break;
+            
+        case 2: // Double comparison
+            if(*(double*)value1 == *(double*)value2) r = 0;
+            else if(*(double*)value1 > *(double*)value2) r = 1;
+            else r = -1;
+            break;
+            
+        default:
+            printf("Error: Unknown type\n");
+            r = 0; // Default return for unknown types
+    }
+    return r;
+}
+int main() 
+{
+    // Test with integers
+    int a = 5, b = 10;
+    int result = Compare(&a, &b, 1);
+    printf("\nInteger comparison (5 vs 10): %d\n", result);
+    // Test with doubles
+    double x = 3.14, y = 3.14;
+    result = Compare(&x, &y, 2);
+    printf("\nDouble comparison (3.14 vs 3.14): %d\n\n", result); 
+    return 0;
+}
+
+```
+![Screenshot 2025-04-10 214035](https://github.com/user-attachments/assets/6cc97713-842b-4301-8ff1-e228112d2c01)
+
