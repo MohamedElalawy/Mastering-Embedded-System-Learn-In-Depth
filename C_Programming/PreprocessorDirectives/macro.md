@@ -265,3 +265,18 @@ echo "DPRINTF inserted at the end of functions."
 ![Screenshot 2025-04-09 190642](https://github.com/user-attachments/assets/43b89904-e341-4580-9ced-c74ff7143bf9)
 
 ![Screenshot 2025-04-09 190707](https://github.com/user-attachments/assets/b83b31bd-09b6-4fd4-ad38-779d86ba430c)
+
+
+## macro VS function
+Here's the table based on the image you provided:
+
+| No | Macro | Function |
+|----|-------|----------|
+| 1 | Macro is Preprocessed | Function is Compiled |
+| 2 | No Type Checking | Type Checking is Done |
+| 3 | Code Length Increases | Code Length remains Same |
+| 4 | Speed of Execution is Faster | Speed of Execution is Slower |
+| 5 | Before Compilation macro name is replaced by macro value | During function call, Transfer of Control takes place |
+| 6 | Useful where small code appears many times | Useful where large code appears many times |
+| 7 | Generally Macros do not extend beyond one line | Function can be of any number of lines |
+
