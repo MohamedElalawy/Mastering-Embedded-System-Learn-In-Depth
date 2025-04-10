@@ -204,4 +204,28 @@ int main()
 
 ```
 ![Screenshot 2025-04-10 214035](https://github.com/user-attachments/assets/6cc97713-842b-4301-8ff1-e228112d2c01)
+## pointer-to-pointer example:
+```C
+#include <stdio.h>
+
+int main() {
+    int x = 5, y = 9;
+    int* px = &x;      // Pointer to int
+    int** ppx = &px;   // Pointer to pointer to int
+    
+    printf("x = %d, y = %d\n", x, y);  // Initial values
+
+    **ppx = 7;        // Modifies x through ppx -> px -> x
+    printf("x = %d, y = %d\n", x, y);  // x is now 7
+
+    *ppx = &y;        // Makes px point to y instead of x
+    *px = 11;         // Modifies y through px (which now points to y)
+    printf("x = %d, y = %d\n", x, y);  // y is now 11
+
+    return 0;
+}
+```
+
+
+![Screenshot 2025-04-10 221306](https://github.com/user-attachments/assets/bc1fb8e3-18a5-4360-b3ee-a3d6472afbcd)
 
