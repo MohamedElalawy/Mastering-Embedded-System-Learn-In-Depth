@@ -229,3 +229,25 @@ int main() {
 
 ![Screenshot 2025-04-10 221306](https://github.com/user-attachments/assets/bc1fb8e3-18a5-4360-b3ee-a3d6472afbcd)
 
+## Pointer to function:
+
+![Screenshot 2025-04-13 191104](https://github.com/user-attachments/assets/c1cc1b91-12b8-4330-94bd-56fc340da6f3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
