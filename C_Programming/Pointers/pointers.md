@@ -235,7 +235,9 @@ int main() {
 
 
 
+## Pointer to function:
 
+![Screenshot 2025-04-13 203119](https://github.com/user-attachments/assets/bc520907-5358-4a65-a2b2-75fbf4d1f009)
 
 
 
