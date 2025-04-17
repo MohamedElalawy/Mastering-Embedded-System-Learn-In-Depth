@@ -10,9 +10,7 @@
 ![image](https://github.com/user-attachments/assets/fae45ad1-bf31-45a3-88ae-a85efceff7da)
 ![image](https://github.com/user-attachments/assets/4b7a3a2c-314f-4d09-a4a9-d11290ad5bbb)
 
-```
 | Expression | Action                  | Effect                                                                 |
 |------------|-------------------------|------------------------------------------------------------------------|
 | `*ptr++`   | **Post-increment pointer** | Returns the current value, then moves `ptr` to the next address.       |
 | `++*ptr`   | **Pre-increment value**    | Increments the value at `ptr` and returns the new value.               |
-```
