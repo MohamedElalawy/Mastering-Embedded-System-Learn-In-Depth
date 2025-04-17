@@ -26,3 +26,23 @@
 
 ![image](https://github.com/user-attachments/assets/34f52626-bbe2-42a2-975b-be5ca0d874b0)
 ![image](https://github.com/user-attachments/assets/a39b897d-a28a-4663-aa99-5722de3b84aa)
+
+
+![image](https://github.com/user-attachments/assets/4e70ead9-02f6-4b9d-8f62-74366ed80590)
+
+![image](https://github.com/user-attachments/assets/733e4325-e2c3-44c7-a0da-8e2e72bb5704)
+
+![image](https://github.com/user-attachments/assets/1d91d194-c8a0-46ec-af59-4f617c8e9ba5)
+
+![image](https://github.com/user-attachments/assets/cda004ee-c2cb-4a04-8465-5c035f52276e)
+```
+can't dereference void pointer
+```
+![image](https://github.com/user-attachments/assets/32c8e8ef-78be-4aa5-86cb-286cdd90588a)
+
+
+
+
+
+
+
