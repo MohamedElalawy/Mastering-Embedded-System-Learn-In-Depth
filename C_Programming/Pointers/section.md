@@ -14,3 +14,7 @@
 |------------|-------------------------|------------------------------------------------------------------------|
 | `*ptr++`   | **Post-increment pointer** | Returns the current value, then moves `ptr` to the next address.       |
 | `++*ptr`   | **Pre-increment value**    | Increments the value at `ptr` and returns the new value.               |
+
+![image](https://github.com/user-attachments/assets/558a56fa-3721-49f4-b306-2d0a8a0b71f3)
+![image](https://github.com/user-attachments/assets/6d63a24a-b15d-4978-8fba-707cb16901c4)
+
