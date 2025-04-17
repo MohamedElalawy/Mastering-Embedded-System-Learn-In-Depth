@@ -50,6 +50,8 @@ can't dereference void pointer
 
 
 
+![image](https://github.com/user-attachments/assets/6bf0d02e-e1ed-4ad2-bcff-a80e9561dc0b)
+![image](https://github.com/user-attachments/assets/22ee457f-fd51-4967-970e-2d555e26db1f)
 
 
 
