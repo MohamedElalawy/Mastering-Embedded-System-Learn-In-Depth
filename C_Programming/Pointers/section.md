@@ -41,6 +41,40 @@ can't dereference void pointer
 ![image](https://github.com/user-attachments/assets/32c8e8ef-78be-4aa5-86cb-286cdd90588a)
 
 
+![image](https://github.com/user-attachments/assets/654bb714-01fa-4d46-a6a8-af871bb26511)
+
+
+![image](https://github.com/user-attachments/assets/74854bec-066d-4c1b-aff0-50370914d3ed)
+
+![image](https://github.com/user-attachments/assets/f9626ad4-e4d7-4b8d-b004-74d1049ced1a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
