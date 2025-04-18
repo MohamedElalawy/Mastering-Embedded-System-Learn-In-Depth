@@ -113,10 +113,11 @@ str[0] = 'h';  // Valid for arrays, invalid for string literals
 3. Both support pointer arithmetic
 4. String literals have automatic null termination, while arrays need proper sizing
 
+```
 
+```
 
-
-
+![Screenshot 2025-04-18 113209](https://github.com/user-attachments/assets/63d53d01-21d1-415f-aa48-b285623ba320)
 
 
 
