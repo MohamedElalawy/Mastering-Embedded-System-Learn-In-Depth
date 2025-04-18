@@ -119,8 +119,36 @@ str[0] = 'h';  // Valid for arrays, invalid for string literals
 
 ![Screenshot 2025-04-18 113209](https://github.com/user-attachments/assets/63d53d01-21d1-415f-aa48-b285623ba320)
 
+![image](https://github.com/user-attachments/assets/50ddb312-4351-46cc-8572-0173f0d76a0c)
 
+![image](https://github.com/user-attachments/assets/016102da-ee6d-4d00-8f4b-492c33651b17)
 
+Exactly! You’re absolutely right 💡
+
+### Clarification:
+- In C, `(void *)0` is the standard **implementation-defined representation** of the **null pointer constant**.
+- It’s often used in low-level code and libraries as the cleanest way to express a pointer to “nowhere.”
+- The macro `NULL` is usually defined as `((void *)0)` in C (or just `0` in C++ for type compatibility).
+
+### So in your code:
+```c
+char *p = (char *)0;
+```
+This is:
+```c
+char *p = (char *)NULL;
+```
+Which means `p` points to address `0`.
+
+### Why casting matters:
+Pointer arithmetic like `p + 1` works correctly because:
+- Pointer arithmetic is based on the size of the type it points to.
+- `p + 1` does not mean “add 1 to the address,” but “advance the pointer by 1 element,” which is `sizeof(type)` bytes.
+
+So:
+- `(char *)0 + 1` = address `0 + 1 byte`
+- `(int *)0 + 1` = address `0 + 4 bytes`
+- etc.
 
 
 
