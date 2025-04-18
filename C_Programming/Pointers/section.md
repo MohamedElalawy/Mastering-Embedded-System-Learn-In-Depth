@@ -55,6 +55,7 @@ can't dereference void pointer
 
 
 # Explanation of Code Snippets
+![image](https://github.com/user-attachments/assets/2136dc40-7531-4fd2-853d-bff39625a63f)
 
 ## 1. String Literal vs. Character Array
 
@@ -113,7 +114,6 @@ str[0] = 'h';  // Valid for arrays, invalid for string literals
 4. String literals have automatic null termination, while arrays need proper sizing
 
 
-![image](https://github.com/user-attachments/assets/2136dc40-7531-4fd2-853d-bff39625a63f)
 
 
 
