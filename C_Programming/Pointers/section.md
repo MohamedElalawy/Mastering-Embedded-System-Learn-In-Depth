@@ -123,9 +123,7 @@ str[0] = 'h';  // Valid for arrays, invalid for string literals
 
 ![image](https://github.com/user-attachments/assets/016102da-ee6d-4d00-8f4b-492c33651b17)
 
-Exactly! You’re absolutely right 💡
 
-### Clarification:
 - In C, `(void *)0` is the standard **implementation-defined representation** of the **null pointer constant**.
 - It’s often used in low-level code and libraries as the cleanest way to express a pointer to “nowhere.”
 - The macro `NULL` is usually defined as `((void *)0)` in C (or just `0` in C++ for type compatibility).
