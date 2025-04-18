@@ -156,7 +156,17 @@ So:
 ![image](https://github.com/user-attachments/assets/75d85840-cad4-4013-81c5-f927bad2ebdb)
 
 
+```c
+int (*f())[];
+```
 
+
+- `f()` → `f` is a function that takes no arguments.
+- `(*f())` → the function returns a pointer.
+- `int (*f())[]` → the function returns a pointer to an **array of integers** (with unspecified size).
+
+### Therefore, the correct answer is:
+**(A) a function returning a pointer to an array of integers.**
 
 
 
