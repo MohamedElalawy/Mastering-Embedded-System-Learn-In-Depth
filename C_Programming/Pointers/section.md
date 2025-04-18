@@ -148,6 +148,10 @@ So:
 - `(int *)0 + 1` = address `0 + 4 bytes`
 - etc.
 
+```
+
+```
+![image](https://github.com/user-attachments/assets/ecfc78b7-8742-459d-9d36-0126e479daaf)
 
 
 
