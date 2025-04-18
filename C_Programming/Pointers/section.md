@@ -54,8 +54,66 @@ can't dereference void pointer
 ![image](https://github.com/user-attachments/assets/ca1a59c2-5ff1-4564-b301-ba64826d6ccf)
 
 
+# Explanation of Code Snippets
+
+## 1. String Literal vs. Character Array
+
+### String Literal (Pointer):
+```c
+char *str = "mohamed";
+str = str + 1;  // Now points to "ohamed"
+```
+- `str` is a pointer to a string literal in read-only memory
+- You can modify the pointer (make it point elsewhere)
+- You cannot modify the string content (undefined behavior if you try)
+
+### Character Array:
+```c
+char arr[10] = "hello";
+str = arr;  // Now str points to the array
+str[0] = 'h';  // This is valid
+```
+- `arr` is a modifiable character array on the stack
+- Contents can be changed
+- Size is fixed at declaration (10 in this case)
+
+## 2. Pointer Arithmetic
+```c
+str = str + 1;  // Moves pointer to next character
+```
+- This works for both string literals and arrays
+- The pointer now points to the next memory location (next character)
+
+## 3. String Literal Assignment
+```c
+char *str = "mohamed";
+str = arr;  // Pointer reassignment
+```
+- The pointer can be reassigned to point to something else
+- The original string literal remains unchanged in read-only memory
+
+## 4. Array Assignment
+```c
+char arr[10] = "hello";
+```
+- Array size must accommodate the string plus null terminator
+- Contents can be modified (unlike string literals)
+
+## 5. Modification Differences
+```c
+str[0] = 'h';  // Valid for arrays, invalid for string literals
+```
+- Works when `str` points to an array
+- Would cause undefined behavior if `str` pointed to a string literal
+
+## Key Differences Summary:
+1. **String Literals** are immutable (read-only), while **character arrays** are mutable
+2. **Pointers** can be reassigned, while **array names** cannot (though their contents can change)
+3. Both support pointer arithmetic
+4. String literals have automatic null termination, while arrays need proper sizing
 
 
+![image](https://github.com/user-attachments/assets/2136dc40-7531-4fd2-853d-bff39625a63f)
 
 
 
