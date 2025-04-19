@@ -169,16 +169,26 @@ int (*f())[];
 **(A) a function returning a pointer to an array of integers.**
 
 
+```
+
+```
+![image](https://github.com/user-attachments/assets/4d0ca0af-1205-414c-9fa5-9c3e7ed3bdf4)
+
+
+![image](https://github.com/user-attachments/assets/5e17704e-7b2c-4ac1-ba02-50a4a49bcb92)
 
 
 
+![image](https://github.com/user-attachments/assets/6df631aa-8225-4761-baa0-cfa7c2802f6e)
 
 
 
+![image](https://github.com/user-attachments/assets/e2c86f7b-c1be-4938-bdbd-05fc8d535912)
 
+*x = 100 attempts to write the value 100 to whatever random memory address x happens to contain
 
-
-
+This is undefined behavior and extremely dangerous
+![image](https://github.com/user-attachments/assets/5fd00b62-0297-4d12-8a7e-d26b78afff8f)
 
 
 
