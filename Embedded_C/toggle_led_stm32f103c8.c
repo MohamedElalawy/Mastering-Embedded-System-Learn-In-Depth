@@ -1,4 +1,3 @@
-
 /**
  ******************************************************************************
  * @file           : main.c
@@ -27,15 +26,15 @@
 
 // Base addresses
 #define RCC_BASE     0x40021000
-#define GPIOA_BASE   0x40010800
+#define GPIOC_BASE   0x40011000
 
 // Offsets
 #define RCC_APB2ENR  (*(volatile uint32_t*)(RCC_BASE + 0x18))
-#define GPIOA_CRH    (*(volatile uint32_t*)(GPIOA_BASE + 0x04))
-#define GPIOA_ODR    (*(volatile uint32_t*)(GPIOA_BASE + 0x0C))
+#define GPIOC_CRH    (*(volatile uint32_t*)(GPIOC_BASE + 0x04))
+#define GPIOC_ODR    (*(volatile uint32_t*)(GPIOC_BASE + 0x0C))
 
-// Bit mask for GPIOA
-#define IOPA_EN      (1 << 2)
+// Bit mask for GPIOC
+#define IOPC_EN      (1 << 4)
 
 // Union for ODR register (Output Data Register)
 typedef union {
@@ -62,32 +61,29 @@ typedef union {
 } GPIO_ODR_t;
 
 // Map union to actual register
-#define GPIOA_ODR_UNION (*(volatile GPIO_ODR_t*)(GPIOA_BASE + 0x0C))
+#define GPIOC_ODR_UNION (*(volatile GPIO_ODR_t*)(GPIOC_BASE + 0x0C))
 
 void delay() {
-    for (volatile int i = 0; i < 500000; ++i);
+    for (volatile int i = 0; i < 50000; ++i);
 }
 
 int main(void) {
-    // 1. Enable GPIOA clock
-    RCC_APB2ENR |= IOPA_EN;
+    // 1. Enable GPIOC clock
+    RCC_APB2ENR |= IOPC_EN;
 
-    // 2. Set PA13 as push-pull output (50 MHz)
+    // 2. Set PC13 as push-pull output (50 MHz)
     // CRH controls pins 8-15. Each pin uses 4 bits.
-    // For PA13: Bits 23:20 = 0011 (0x3)
-    GPIOA_CRH &= ~(0xF << 20);     // Clear bits
-    GPIOA_CRH |=  (0x3 << 20);     // MODE13 = 0b11 (Output 50 MHz), CNF13 = 0b00 (Push-pull)
+    // For PC13: Bits 23:20 = 0011 (0x3)
+    GPIOC_CRH &= ~(0xF << 20);     // Clear bits
+    GPIOC_CRH |=  (0x3 << 20);     // MODE13 = 0b11 (Output 50 MHz), CNF13 = 0b00 (Push-pull)
 
-    // 3. Toggle PA13
+    // 3. Toggle PC13
     while (1) {
-        GPIOA_ODR_UNION.bits.pin13 = 1; // Set PA13
+        GPIOC_ODR_UNION.bits.pin13 = 0; // Clear PC13 (LED ON if active-low)
         delay();
-        GPIOA_ODR_UNION.bits.pin13 = 0; // Clear PA13
+        GPIOC_ODR_UNION.bits.pin13 = 1; // Set PC13 (LED OFF if active-low)
         delay();
     }
 
     return 0;
 }
-
-
-
