@@ -90,46 +90,40 @@ int main(void) {
 
 
 /*
+------------------------------------------------------------
+GPIO Output Types: Push-Pull vs Open-Drain
+------------------------------------------------------------
 
-الفرق بين **Push-Pull** و **Open-Drain** في توصيل المخرجات الكهربائية بيكون في طريقة تحكم الـ MCU بحالة الإشارة:
+1. Push-Pull Output:
+---------------------
+- Uses two transistors to drive the pin either HIGH (Vcc) or LOW (GND).
+- Can actively drive both logic levels without external components.
+- Suitable for driving LEDs, relays, and digital logic inputs.
 
----
+  Pros:
+  - Fast switching.
+  - No need for external pull-up resistor.
+  - Simple and reliable for direct control.
 
-### **Push-Pull:**
-- بيستخدم ترانزستورين: واحد يوصل الطرف بـ **Vcc** (جهد عالي)، والتاني بـ **GND** (جهد منخفض).
-- يمكنه إخراج **HIGH أو LOW** بدون الحاجة لمكونات خارجية.
-- مناسب للتوصيلات اللي مش محتاجة مشاركة للخط (Shared line).
-- مثال: تشغيل ليد، ريليه، إلخ.
+2. Open-Drain Output:
+----------------------
+- Only uses one transistor to pull the pin LOW.
+- Requires an external pull-up resistor to go HIGH.
+- Ideal for shared communication lines like I2C or interrupt lines.
 
-**مميزاته:**
-- سهل الاستخدام.
-- استجابة سريعة.
-- لا يحتاج مقاومة سحب (Pull-up).
+  Pros:
+  - Allows multiple devices to share the same line safely.
+  - Useful for level shifting between different voltages.
 
----
+------------------------------------------------------------
+Summary:
+------------------------------------------------------------
+| Feature          | Push-Pull        | Open-Drain         |
+|------------------|------------------|--------------------|
+| Drive HIGH       | Yes              | No (needs pull-up) |
+| Drive LOW        | Yes              | Yes                |
+| Needs pull-up    | No               | Yes                |
+| Multi-device Bus | No               | Yes                |
 
-### **Open-Drain (أو Open-Collector في بعض الأنظمة):**
-- بيستخدم ترانزستور واحد فقط يوصل الطرف بـ **GND**.
-- ما يقدرش يخرج HIGH بنفسه، فلازم مقاومة سحب خارجيّة (Pull-up resistor) عشان تطلع HIGH.
+*/
 
-**مميزاته:**
-- مفيد في **الاتصال بين أكثر من جهاز** على نفس الخط (مثل I2C).
-- يقلل التعارض بين إشارات متعددة.
-
-**مثال:**
-- لو خرج المايكرو 0: يشد السلك للأرضي (LOW).
-- لو خرج المايكرو 1: يترك السلك، والمقاومة تسحبه لـ HIGH.
-
----
-
-### **خلاصة الفرق:**
-
-| الخاصية            | Push-Pull        | Open-Drain         |
-|--------------------|------------------|--------------------|
-| إخراج HIGH و LOW   | نعم              | LOW فقط (HIGH بمساعدة خارجية) |
-| الحاجة لمقاومة Pull-up | لا              | نعم                |
-| الاستخدام          | إشارات فردية      | خطوط مشاركة مثل I2C و الإنترابت |
-
-تحب أمثلة عملية أو رسمة توضيحية؟
-
-  */
