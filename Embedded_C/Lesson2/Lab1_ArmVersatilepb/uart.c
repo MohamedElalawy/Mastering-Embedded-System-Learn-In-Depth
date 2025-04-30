@@ -1,5 +1,3 @@
-
-
 #include "uart.h"
 #define UART0DR *((volatile unsigned int *const)((unsigned int*)0x101f1000))
 
