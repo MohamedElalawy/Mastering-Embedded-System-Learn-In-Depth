@@ -71,6 +71,10 @@ DWARF is the standard debug info format used by GDB. Different versions offer va
 | **`-gdwarf-4`** | DWARF-4 | Faster debug loading (split `.debug_info`). |
 | **`-gdwarf-5`** | DWARF-5 | Best compression, improved line tables. |
 
+---
+
+Example for gdb setup paths:
+![image](https://github.com/user-attachments/assets/804f5b29-bd06-437b-b1dd-6dfd7d37f8de)
 
 
 
