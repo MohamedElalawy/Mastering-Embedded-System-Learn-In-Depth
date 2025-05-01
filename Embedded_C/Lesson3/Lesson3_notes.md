@@ -48,6 +48,28 @@ Now debug info sections are added:
 ![image](https://github.com/user-attachments/assets/e80d488d-c7cf-47ae-b032-eea00d769c02)
 
 
+## 1. Basic Debugging Levels (`-g`, `-g1`, `-g2`, `-g3`)
+
+These control the **amount** of debug information generated.
+
+| Option   | Description | Use Case |
+|----------|-------------|----------|
+| **`-g`** (same as `-g2`) | Standard debug info (line numbers, variables, functions). | Default for most debugging. |
+| **`-g1`** | Minimal debug info (function declarations, external vars). No locals or line numbers. | Reducing binary size while keeping minimal debugging. |
+| **`-g2`** | Same as `-g`. Full debug info (line numbers, locals, functions). | General debugging. |
+| **`-g3`** | **Extra debug info** (includes macros, inline functions). | Debugging heavily macro-based code. |
+
+## 2. DWARF Debugging Format (`-gdwarf`, `-gdwarf-N`)
+
+DWARF is the standard debug info format used by GDB. Different versions offer varying features.
+
+| Option          | DWARF Version | Key Features |
+|-----------------|--------------|--------------|
+| **`-gdwarf`**   | Default (varies by GCC) | Usually DWARF-2 or newer. |
+| **`-gdwarf-2`** | DWARF-2 | Basic debugging (variables, line numbers). |
+| **`-gdwarf-3`** | DWARF-3 | Adds macro support (requires `-g3`). |
+| **`-gdwarf-4`** | DWARF-4 | Faster debug loading (split `.debug_info`). |
+| **`-gdwarf-5`** | DWARF-5 | Best compression, improved line tables. |
 
 
 
