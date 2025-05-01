@@ -45,4 +45,13 @@ Now debug info sections are added:
 ![image](https://github.com/user-attachments/assets/19042c12-18af-4478-bf73-f9d37a3c75df)
 
 
+![image](https://github.com/user-attachments/assets/e80d488d-c7cf-47ae-b032-eea00d769c02)
+
+
+
+
+
+
+
+
 
