@@ -59,7 +59,7 @@ These control the **amount** of debug information generated.
 | **`-g2`** | Same as `-g`. Full debug info (line numbers, locals, functions). | General debugging. |
 | **`-g3`** | **Extra debug info** (includes macros, inline functions). | Debugging heavily macro-based code. |
 
-## 2. DWARF Debugging Format (`-gdwarf`, `-gdwarf-N`)
+## 2. DWARF Debugging Format (`-gdwarf`, `-gdwarf-N`) "Proteus uses this type"
 
 DWARF is the standard debug info format used by GDB. Different versions offer varying features.
 
