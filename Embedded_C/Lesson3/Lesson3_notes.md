@@ -32,7 +32,7 @@ GDB (GNU Debugger) offers a comprehensive list of commands, but these are the mo
 - **q** - Quit GDB  
 
 ---
-# -g to generate debug info which is a must to use gdb:
+# -g option to generate debug info which is a must to use gdb:
 ```bash
 $ arm-none-eabi-as.exe -mcpu=arm926ej-s startup.s -o startup.o
 $ arm-none-eabi-gcc.exe -c -I . -g -mcpu=arm926ej-s lab1.c -o lab1.o
