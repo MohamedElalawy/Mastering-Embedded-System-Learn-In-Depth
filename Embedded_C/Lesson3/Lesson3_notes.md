@@ -41,6 +41,8 @@ $ arm-none-eabi-ld.exe -T linker_script.ld startup.o lab1.o uart.o -o lab1.elf -
 $ arm-none-eabi-objcopy.exe -O binary lab1.elf lab1.bin
 
 ```
+Now debug info sections are added:
+![image](https://github.com/user-attachments/assets/19042c12-18af-4478-bf73-f9d37a3c75df)
 
 
 
