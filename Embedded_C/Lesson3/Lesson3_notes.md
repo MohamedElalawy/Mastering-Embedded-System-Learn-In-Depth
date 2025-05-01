@@ -32,4 +32,13 @@ GDB (GNU Debugger) offers a comprehensive list of commands, but these are the mo
 - **q** - Quit GDB  
 
 ---
+# -g to generate debug info which is a must to use gdb:
+$ arm-none-eabi-as.exe -mcpu=arm926ej-s startup.s -o startup.o
+$ arm-none-eabi-gcc.exe -c -I . -g -mcpu=arm926ej-s lab1.c -o lab1.o
+$ arm-none-eabi-gcc.exe -c -I . -g -mcpu=arm926ej-s uart.c -o uart.o
+$ arm-none-eabi-ld.exe -T linker_script.ld startup.o lab1.o uart.o -o lab1.elf -Map=Map_file.map
+$ arm-none-eabi-objcopy.exe -O binary lab1.elf lab1.bin
+
+
+
 
