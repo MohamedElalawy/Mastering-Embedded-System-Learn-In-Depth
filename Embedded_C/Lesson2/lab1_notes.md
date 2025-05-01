@@ -19,3 +19,5 @@
 
 ![Screenshot 2025-05-01 124249](https://github.com/user-attachments/assets/57fc1276-367c-4d14-a27b-92b716a60100)
 ![Screenshot 2025-05-01 124842](https://github.com/user-attachments/assets/a2eee582-d3a6-4a37-9be7-47584e3d9027)
+![Screenshot 2025-05-01 125836](https://github.com/user-attachments/assets/042984a6-6579-48c0-966f-b46038d7c3cc)
+![Screenshot 2025-05-01 131021](https://github.com/user-attachments/assets/3a2b8e64-7128-45cb-9b95-5ede60086260)
