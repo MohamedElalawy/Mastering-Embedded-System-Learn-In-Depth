@@ -51,3 +51,4 @@ qemu-system-arm -M versatilepb -m 128M -nographic -s -S -kernel lab1.bin
 
 ![image](https://github.com/user-attachments/assets/2cc718cb-eff7-4159-8ddb-03081c5293f2)
 
+![image](https://github.com/user-attachments/assets/57795923-32f3-4469-8c9f-f23076583aa5)
