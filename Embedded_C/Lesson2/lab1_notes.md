@@ -21,3 +21,33 @@
 ![Screenshot 2025-05-01 124842](https://github.com/user-attachments/assets/a2eee582-d3a6-4a37-9be7-47584e3d9027)
 ![Screenshot 2025-05-01 125836](https://github.com/user-attachments/assets/042984a6-6579-48c0-966f-b46038d7c3cc)
 ![Screenshot 2025-05-01 131021](https://github.com/user-attachments/assets/3a2b8e64-7128-45cb-9b95-5ede60086260)
+
+---
+![image](https://github.com/user-attachments/assets/3c79c0f0-170a-4029-9f88-c82960cc7c2c)
+
+
+
+# QEMU Command Explanation
+
+The following command launches QEMU to emulate an ARM-based system for debugging bare-metal programs:
+
+```bash
+qemu-system-arm -M versatilepb -m 128M -nographic -s -S -kernel lab1.bin
+```
+
+## Options Breakdown
+
+| Option          | Description |
+|-----------------|-------------|
+| `qemu-system-arm` | QEMU executable for ARM system emulation. |
+| `-M versatilepb`  | Emulates the **ARM Versatile Platform Baseboard** (a common development board). |
+| `-m 128M`        | Allocates **128MB of RAM** to the emulated machine. |
+| `-nographic`     | Disables graphical output; redirects all I/O to the terminal. |
+| `-s`             | Enables a **GDB server** on default port `1234` for debugging. |
+| `-S`             | **Pauses the CPU** at startup (requires GDB to resume execution). |
+| `-kernel lab1.bin` | Loads the bare-metal ARM binary `lab1.bin` as the kernel. |
+
+---
+
+
+
