@@ -2,12 +2,12 @@
 ENTRY(reset)
 MEMORY
 {
-	Mem (rwx) : ORIGIN = 0x00000000, LENGTH = 64M
+	Mem (rwx) : ORIGIN = 0x00000000, LENGTH = 128M
 
 }
 SECTIONS
 {
-	. = 0x10000;
+	. = 0x00000000;
 
 	.startup . :
 	{

@@ -2,63 +2,64 @@
 Memory Configuration
 
 Name             Origin             Length             Attributes
-Mem              0x00000000         0x04000000         xrw
+Mem              0x00000000         0x08000000         xrw
 *default*        0x00000000         0xffffffff
 
 Linker script and memory map
 
-                0x00010000                . = 0x10000
+                0x00000000                . = 0x0
 
-.startup        0x00010000        0xc
+.startup        0x00000000       0x10
  startup.o(.text)
- .text          0x00010000        0xc startup.o
-                0x00010000                reset
+ .text          0x00000000       0x10 startup.o
+                0x00000000                reset
+                0x00000008                stop
 
-.text           0x0001000c       0x70
+.text           0x00000010       0x70
  *(.text)
- .text          0x0001000c       0x1c lab1.o
-                0x0001000c                main
- .text          0x00010028       0x54 uart.o
-                0x00010028                uart_send_string
+ .text          0x00000010       0x1c lab1.o
+                0x00000010                main
+ .text          0x0000002c       0x54 uart.o
+                0x0000002c                uart_send_string
 
-.glue_7         0x0001007c        0x0
- .glue_7        0x0001007c        0x0 linker stubs
+.glue_7         0x00000080        0x0
+ .glue_7        0x00000080        0x0 linker stubs
 
-.glue_7t        0x0001007c        0x0
- .glue_7t       0x0001007c        0x0 linker stubs
+.glue_7t        0x00000080        0x0
+ .glue_7t       0x00000080        0x0 linker stubs
 
-.vfp11_veneer   0x0001007c        0x0
- .vfp11_veneer  0x0001007c        0x0 linker stubs
+.vfp11_veneer   0x00000080        0x0
+ .vfp11_veneer  0x00000080        0x0 linker stubs
 
-.v4_bx          0x0001007c        0x0
- .v4_bx         0x0001007c        0x0 linker stubs
+.v4_bx          0x00000080        0x0
+ .v4_bx         0x00000080        0x0 linker stubs
 
-.iplt           0x0001007c        0x0
- .iplt          0x0001007c        0x0 startup.o
+.iplt           0x00000080        0x0
+ .iplt          0x00000080        0x0 startup.o
 
-.rel.dyn        0x0001007c        0x0
- .rel.iplt      0x0001007c        0x0 startup.o
+.rel.dyn        0x00000080        0x0
+ .rel.iplt      0x00000080        0x0 startup.o
 
-.data           0x0001007c       0x14
+.data           0x00000080       0x14
  *(.data)
- .data          0x0001007c        0x0 startup.o
- .data          0x0001007c       0x14 lab1.o
-                0x0001007c                string_message
- .data          0x00010090        0x0 uart.o
+ .data          0x00000080        0x0 startup.o
+ .data          0x00000080       0x14 lab1.o
+                0x00000080                string_message
+ .data          0x00000094        0x0 uart.o
 
-.igot.plt       0x00010090        0x0
- .igot.plt      0x00010090        0x0 startup.o
+.igot.plt       0x00000094        0x0
+ .igot.plt      0x00000094        0x0 startup.o
 
-.bss            0x00010090        0x0
+.bss            0x00000094        0x0
  *(.bss)
- .bss           0x00010090        0x0 startup.o
- .bss           0x00010090        0x0 lab1.o
- .bss           0x00010090        0x0 uart.o
-                0x00011090                . = (. + 0x1000)
-                0x00011090                stack_top = .
-LOAD startup.o
+ .bss           0x00000094        0x0 startup.o
+ .bss           0x00000094        0x0 lab1.o
+ .bss           0x00000094        0x0 uart.o
+                0x00001094                . = (. + 0x1000)
+                0x00001094                stack_top = .
 LOAD lab1.o
 LOAD uart.o
+LOAD startup.o
 OUTPUT(lab1.elf elf32-littlearm)
 
 .ARM.attributes
@@ -74,3 +75,37 @@ OUTPUT(lab1.elf elf32-littlearm)
  .comment       0x00000000       0x7e lab1.o
                                  0x7f (size before relaxing)
  .comment       0x0000007e       0x7f uart.o
+
+.debug_line     0x00000000      0x192
+ .debug_line    0x00000000       0x3a startup.o
+ .debug_line    0x0000003a      0x11d lab1.o
+ .debug_line    0x00000157       0x3b uart.o
+
+.debug_info     0x00000000      0x944
+ .debug_info    0x00000000       0x26 startup.o
+ .debug_info    0x00000026      0x8c7 lab1.o
+ .debug_info    0x000008ed       0x57 uart.o
+
+.debug_abbrev   0x00000000      0x20c
+ .debug_abbrev  0x00000000       0x14 startup.o
+ .debug_abbrev  0x00000014      0x1a7 lab1.o
+ .debug_abbrev  0x000001bb       0x51 uart.o
+
+.debug_aranges  0x00000000       0x60
+ .debug_aranges
+                0x00000000       0x20 startup.o
+ .debug_aranges
+                0x00000020       0x20 lab1.o
+ .debug_aranges
+                0x00000040       0x20 uart.o
+
+.debug_str      0x00000000      0x54e
+ .debug_str     0x00000000       0x99 startup.o
+ .debug_str     0x00000099      0x491 lab1.o
+                                0x569 (size before relaxing)
+ .debug_str     0x0000052a       0x24 uart.o
+                                0x10f (size before relaxing)
+
+.debug_frame    0x00000000       0x5c
+ .debug_frame   0x00000000       0x2c lab1.o
+ .debug_frame   0x0000002c       0x30 uart.o

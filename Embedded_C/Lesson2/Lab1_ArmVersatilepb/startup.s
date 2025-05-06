@@ -1,5 +1,6 @@
 /* Muhamad Elalawy Startup.s*/
 .global reset            /* Make 'reset' visible to the linker*/
+.global stop
 
 reset:
     ldr sp, =stack_top  /* Set stack pointer*/
