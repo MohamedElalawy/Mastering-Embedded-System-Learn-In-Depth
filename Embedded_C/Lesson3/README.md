@@ -1,5 +1,5 @@
 
-<h3>🎥 Click the image below to watch the first video:</h3>
+<h3>🎥 Click the image below to watch proteus video:</h3>
 
 <p align="center">
   <a href="https://drive.google.com/file/d/1m8SZkSOcJnzv1Kl4L9eIhOVl_aDJ_bMD/view?usp=drive_link" target="_blank">
@@ -9,7 +9,7 @@
 
 ---
 
-<h3>🎥 Click the image below to watch the second video:</h3>
+<h3>🎥 Click the image below to watch real HW video:</h3>
 
 <p align="center">
   <a href="https://drive.google.com/file/d/1D98k3GSbeYJrsqTPkAw_QrGZxDlK3O9j/view?usp=drive_link" target="_blank">
