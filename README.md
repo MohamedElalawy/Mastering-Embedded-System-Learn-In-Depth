@@ -4,10 +4,19 @@
 
 <p align="center"><em>By Eng. Keroles Shenouda — Documented by <strong>Muhammad Elalawy</strong></em></p>
 
+<h3 align="center">🚧 Current Progress</h3>
+
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Coverage-25%25-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/-Status:%20In%20Progress-yellow?style=flat-square&logo=git&logoColor=black" />
+  <img src="https://img.shields.io/badge/-Coverage:%2025%25-orange?style=flat-square&logo=github&logoColor=white" />
 </p>
+
+<p align="center">
+  <img src="https://progress-bar.dev/25/?width=300&title=Overall+Progress" alt="Progress Bar" />
+</p>
+
+
+
 
 ---
 
