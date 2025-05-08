@@ -1,4 +1,4 @@
-
+# Lab3: Toggle led using TIVA C TM4C123
 <h3>🎥 Click the image below to watch lab3 implementation video:</h3>
 
 <p align="center">
