@@ -1,5 +1,5 @@
 
-<h3>🎥 Click the image below to watch the implementation video:</h3>
+<h3>🎥 Click the image below to watch lab3 implementation video:</h3>
 
 <p align="center">
   <a href="https://drive.google.com/file/d/1d30U7R0FDOuJBQeDtJYacY8I3IGOdIvS/view?usp=drive_link" target="_blank">
