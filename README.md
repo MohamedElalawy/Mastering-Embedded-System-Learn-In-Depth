@@ -8,12 +8,11 @@
 <h3 align="center">🚧 Current Progress</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge&logo=github" />
-  <img src="https://img.shields.io/badge/Coverage-25%25-orange?style=for-the-badge&logo=codecov" />
+  <img src="https://img.shields.io/badge/Progress-25%25-orange?style=for-the-badge&logo=github" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Progress-▰▰▱▱▱▱▱▱▱▱-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/▰▱▱▱▱▱▱▱▱▱-25%25-orange?style=for-the-badge" />
 </p>
 
 
