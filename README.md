@@ -11,11 +11,6 @@
   <img src="https://img.shields.io/badge/Progress-25%25-orange?style=for-the-badge&logo=github" />
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/▰▱▱▱▱▱▱▱▱▱-25%25-orange?style=for-the-badge" />
-</p>
-
-
 
 ---
 
