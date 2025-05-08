@@ -1,43 +1,163 @@
-#  Mastering Embedded System | Learn In Depth
+<!-- README.md -->
 
-📌 This repository contains my assignments, practice, and projects of **Mastering Embedded System** diploma by **Eng. Keroles Shenouda** at Learn In Depth.
+<h1 align="center">Mastering Embedded System | Learn In Depth</h1>
+
+<p align="center"><em>By Eng. Keroles Shenouda — Documented by <strong>Muhammad Elalawy</strong></em></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Coverage-20%25-orange?style=for-the-badge" />
+</p>
 
 ---
 
-## 📊 Diploma Progress  
-### ███░░░░░░░░ (20%)
+## 🚀 Overview
 
-
+This repository contains my assignments, practice files, and projects for the **Mastering Embedded Systems Diploma** provided by [Learn In Depth](https://learn-in-depth.com).
 
 ---
 
-| 📌 Unit Name                            | Progress         |
-|-----------------------------------------|-----------------|
-| 🔹 **Introduction**                     | ██████████ (100%) |
-| 🔹 **C Programming**                    | ██████████ (100%) |
-| 🔹 **Embedded C**                       | ███░░░░░░░ (25%) |
-| 🔹 **System Architect**                  | ░░░░░░░░░░ (0%)  |
-| 🔹 **First Term Exam And Project**       | ░░░░░░░░░░ (0%)  |
-| 🔹 **Microcontroller Arch**              | ░░░░░░░░░░ (0%)  |
-| 🔹 **MCU Essential Peripherals**         | ░░░░░░░░░░ (0%)  |
-| 🔹 **MCU Interfacing**                   | ░░░░░░░░░░ (0%)  |
-| 🔹 **MCU (Timers & ADC)**                | ░░░░░░░░░░ (0%)  |
-| 🔹 **Testing & Validation**              | ░░░░░░░░░░ (0%)  |
-| 🔹 **Embedded Systems Jobs**             | ░░░░░░░░░░ (0%)  |
-| 🔹 **Advanced Topics**                   | ░░░░░░░░░░ (0%)  |
-| 🔹 **Mastering CAN Protocol**            | ░░░░░░░░░░ (0%)  |
-| 🔹 **Mastering Arm Cortex M3/4**         | ░░░░░░░░░░ (0%)  |
-| 🔹 **My Own RTOS**                       | ░░░░░░░░░░ (0%)  |
-| 🔹 **Sensors and Actuators**             | ░░░░░░░░░░ (0%)  |
-| 🔹 **Soft Skills**                       | ░░░░░░░░░░ (0%)  |
+## 📊 Diploma Progress
 
+<div style="border:1px solid #ddd;padding:10px;border-radius:8px;margin-bottom:20px;">
+  <strong>Overall Progress: 20%</strong>
+  <div style="background:#eee;border-radius:8px;overflow:hidden;margin-top:5px;">
+    <div style="width:20%;background:#f39c12;height:20px;"></div>
+  </div>
+</div>
 
-- 📫 How to reach me **mohamedelalawey7@gmail.com**
+<table>
+  <tr><th align="left">📘 Unit</th><th align="left">✅ Progress</th></tr>
 
-<h3 align="left">Connect with me:</h3>
+  <tr><td>🔹 Introduction</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:100%;background:#27ae60;height:15px;border-radius:8px;"></div>
+    </div> <small>100%</small>
+  </td></tr>
+
+  <tr><td>🔹 C Programming</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:100%;background:#27ae60;height:15px;border-radius:8px;"></div>
+    </div> <small>100%</small>
+  </td></tr>
+
+  <tr><td>🔹 Embedded C</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:25%;background:#3498db;height:15px;border-radius:8px;"></div>
+    </div> <small>25%</small>
+  </td></tr>
+
+  <tr><td>🔹 System Architect</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 First Term Exam & Project</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 Microcontroller Arch</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 MCU Essential Peripherals</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 MCU Interfacing</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 MCU (Timers & ADC)</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 Testing & Validation</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 Embedded Systems Jobs</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 Advanced Topics</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 Mastering CAN Protocol</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 Mastering Arm Cortex M3/4</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 My Own RTOS</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 Sensors and Actuators</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+  <tr><td>🔹 Soft Skills</td>
+  <td>
+    <div style="background:#eee;width:100%;border-radius:8px;">
+      <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
+    </div> <small>0%</small>
+  </td></tr>
+
+</table>
+
+---
+
+## 📫 Contact Me
+
 <p align="left">
-<a href="https://twitter.com/elalawey" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="elalawey" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/elalawy" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="elalawy" height="30" width="40" /></a>
-<a href="https://fb.com/pioneer383" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="pioneer383" height="30" width="40" /></a>
-<a href="https://www.hackerrank.com/mohamedelalawey7" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="mohamedelalawey7" height="30" width="40" /></a>
+  <a href="mailto:mohamedelalawey7@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://twitter.com/elalawey" target="_blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=flat&logo=twitter&logoColor=white" alt="Twitter" /></a>
+  <a href="https://linkedin.com/in/elalawy" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://fb.com/pioneer383" target="_blank"><img src="https://img.shields.io/badge/Facebook-1877F2?style=flat&logo=facebook&logoColor=white" alt="Facebook" /></a>
+  <a href="https://www.hackerrank.com/mohamedelalawey7" target="_blank"><img src="https://img.shields.io/badge/HackerRank-2EC866?style=flat&logo=HackerRank&logoColor=white" alt="HackerRank" /></a>
 </p>
