@@ -20,7 +20,7 @@ This repository contains my assignments, practice files, and projects for the **
 ## 📊 Diploma Progress
 
 <div style="border:1px solid #ddd;padding:10px;border-radius:8px;margin-bottom:20px;">
-  <strong>Overall Progress: 20%</strong>
+  <strong>Overall Progress: 25%</strong>
   <div style="background:#eee;border-radius:8px;overflow:hidden;margin-top:5px;">
     <div style="width:20%;background:#f39c12;height:20px;"></div>
   </div>
@@ -47,7 +47,7 @@ This repository contains my assignments, practice files, and projects for the **
   <td>
     <div style="background:#eee;width:100%;border-radius:8px;">
       <div style="width:25%;background:#3498db;height:15px;border-radius:8px;"></div>
-    </div> <small>25%</small>
+    </div> <small>100%</small>
   </td></tr>
 
   <tr><td>🔹 System Architect</td>
