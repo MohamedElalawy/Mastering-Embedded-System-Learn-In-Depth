@@ -3,29 +3,28 @@
 
 ```c
 
-typedef volatile unsigned int vuint32_t;
+void* __sbrk(int incr) {
+    static unsigned char* heap_ptr = NULL;
+    unsigned char* prev_heap_ptr = NULL;
+    extern unsigned int _E_bss; // symbol
+    extern unsigned int _heap_End; // symbol
 
-#include <stdint.h>
-#include <stdlib.h>
-
-#define heap_width 500 // 500 B
-
-void *_sbrk(int incr)
-{
-    static uint8_t *heap_ptr = NULL;
-    uint8_t *prev_heap_ptr;
-
-    if (heap_ptr == NULL)
+    // first time initialized
+    if (heap_ptr == NULL) {
         heap_ptr = (unsigned char*)&_E_bss;
+    }
 
     prev_heap_ptr = heap_ptr;
 
-    /* Protect heap from growing into the reserved stack */
-    if ((heap_ptr + incr) > ((unsigned char*)&_E_bss + heap_width))
-        return (void *)NULL;
+    // protect stack
+    if ((heap_ptr + incr) > (&_heap_End)) {
+        return (void*)NULL;
+    }
 
+    // Booking inc size
     heap_ptr += incr;
-    return (void *)prev_heap_ptr;
+
+    return (void*)prev_heap_ptr;
 }
 ```
 
@@ -42,3 +41,37 @@ Otherwise, it increments heap_ptr and returns the previous value.
 
 This function is used by the standard library's malloc implementation to allocate memory in bare-metal systems where no OS is present.
 
+# modify the linker script 
+
+```ld
+
+SECTIONS {
+    .text : {
+        *(.vectors*)
+        *(.text*)
+        *(.rodata)
+        _E_text = .;
+    } > flash
+
+    .data : {
+        _S_DATA = .;
+        *(.data)
+        . = ALIGN(4);
+        _E_DATA = .;
+    } > sram AT> flash
+
+    .bss : {
+        _S_bss = .;
+        *(.bss*)
+        _E_bss = .;
+        . = ALIGN(4);
+        . = . + 0x1000;
+        _heap_End = .;
+        . = ALIGN(4);
+        . = . + 0x1000;
+        _stack_top = .;
+    } > sram
+}
+
+
+```
