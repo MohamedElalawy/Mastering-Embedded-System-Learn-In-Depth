@@ -57,6 +57,7 @@ SECTIONS {
     .data : {
         _S_DATA = .;
         *(.data)
+        *(.data.*)
         . = ALIGN(4);
         _E_DATA = .;
     } > sram AT> flash
