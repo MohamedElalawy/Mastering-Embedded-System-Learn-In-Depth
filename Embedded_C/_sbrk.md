@@ -27,12 +27,12 @@ void *_sbrk(int incr)
     heap_ptr += incr;
     return (void *)prev_heap_ptr;
 }
+```
 
 Description
 
 This is a custom implementation of the _sbrk function, used in embedded systems to support dynamic memory allocation (e.g., for malloc). It works by maintaining a simple heap region starting from the end of the .bss section.
-
-Key Points
+---
 
 
 The function checks if the requested memory will exceed the heap boundary. If so, it returns NULL.
@@ -42,3 +42,4 @@ Otherwise, it increments heap_ptr and returns the previous value.
 
 This function is used by the standard library's malloc implementation to allocate memory in bare-metal systems where no OS is present.
 
+---
