@@ -8,7 +8,7 @@
 <h3 align="center">🚧 Current Progress</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Progress-25%25-orange?style=for-the-badge&logo=rocket" />
+  <img src="https://img.shields.io/badge/Progress-30%25-orange?style=for-the-badge&logo=rocket" />
 </p>
 
 
