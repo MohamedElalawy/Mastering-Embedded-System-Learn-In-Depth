@@ -13,24 +13,27 @@ In this project, I have implemented a basic collision avoidance system using a U
 ![Screenshot 2025-05-16 035230](https://github.com/user-attachments/assets/fd8901fe-3b6a-454e-bd6f-fa3567ed428a)
 
 ### **2.1 Main Components**
-
+---
 * **US\_sensor Block**
-![Screenshot 2025-05-16 040424](https://github.com/user-attachments/assets/69507ac9-6f93-468c-a9c0-69cbcd35f595)
 
   This block simulates an ultrasonic sensor responsible for measuring the distance to the nearest object. It outputs this distance to the CA block.
-
+![Screenshot 2025-05-16 040424](https://github.com/user-attachments/assets/69507ac9-6f93-468c-a9c0-69cbcd35f595)
+---
+---
 * **CA Block (Collision Avoidance Controller)**
-![image](https://github.com/user-attachments/assets/8db66eeb-383f-404f-934d-08a042eb5868)
 
   Acts as the decision-making unit of the system. It receives distance data from the sensor and calculates the appropriate motor speed. It applies a simple rule-based logic using a predefined threshold value.
-
+![image](https://github.com/user-attachments/assets/8db66eeb-383f-404f-934d-08a042eb5868)
+---
+---
 * **DC\_motor Block**
-![Screenshot 2025-05-16 040412](https://github.com/user-attachments/assets/329042fd-ab00-4e6b-b89f-bf17b40572c1)
   Receives speed commands from the CA block and simulates the response of the motor based on the speed value.
-
+![Screenshot 2025-05-16 040412](https://github.com/user-attachments/assets/329042fd-ab00-4e6b-b89f-bf17b40572c1)
+---
 ---
 
 ## **3. UML Block Diagram Description**
+![Screenshot 2025-05-16 035230](https://github.com/user-attachments/assets/fd8901fe-3b6a-454e-bd6f-fa3567ed428a)
 
 The **block definition diagram** presents the structural view of the system:
 
