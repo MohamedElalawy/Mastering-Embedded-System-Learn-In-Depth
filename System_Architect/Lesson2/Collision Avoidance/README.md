@@ -1,8 +1,5 @@
 
 
-![Screenshot 2025-05-17 011717](https://github.com/user-attachments/assets/5a02bdff-60fe-47b0-ad08-32e58e947c6f)
-Here’s a sample report for your **Collision Avoidance Project** based on the provided UML block and sequence diagrams:
-
 ---
 
 # **Collision Avoidance Project Report**
@@ -205,3 +202,5 @@ STATE_define(US_busy){
 
 
 ```
+![Screenshot 2025-05-17 011717](https://github.com/user-attachments/assets/5a02bdff-60fe-47b0-ad08-32e58e947c6f)
+
