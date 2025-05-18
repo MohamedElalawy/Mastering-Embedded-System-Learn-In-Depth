@@ -7,7 +7,7 @@
 ## **1. Introduction**
 ![Screenshot 2025-05-16 035230](https://github.com/user-attachments/assets/fd8901fe-3b6a-454e-bd6f-fa3567ed428a)
 
-In this project, we have implemented a basic collision avoidance system using a US (Ultrasonic) sensor, a central controller block (CA), and a DC motor. The system mimics a simplified embedded software behavior that reads distance from the US sensor, processes the data through a central logic (CA), and adjusts the motor speed accordingly to avoid collisions. The model is based on SysML using block definition and sequence diagrams.
+In this project, I have implemented a basic collision avoidance system using a US (Ultrasonic) sensor, a central controller block (CA), and a DC motor. The system mimics a simplified embedded software behavior that reads distance from the US sensor, processes the data through a central logic (CA), and adjusts the motor speed accordingly to avoid collisions. The model is based on SysML using block definition and sequence diagrams.
 
 ---
 
