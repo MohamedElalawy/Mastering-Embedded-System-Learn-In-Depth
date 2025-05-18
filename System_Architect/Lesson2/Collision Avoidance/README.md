@@ -1,5 +1,4 @@
 
-![simulationtrace_fromttool](https://github.com/user-attachments/assets/4292e8d2-b44c-46e9-a259-b3e0f9f5e281)
 
 ![Screenshot 2025-05-17 011717](https://github.com/user-attachments/assets/5a02bdff-60fe-47b0-ad08-32e58e947c6f)
 Here’s a sample report for your **Collision Avoidance Project** based on the provided UML block and sequence diagrams:
@@ -50,6 +49,7 @@ Communication between blocks is defined using directed connectors, indicating th
 ## **4. Behavior Modeling**
 
 ### **4.1 Sequence Diagram Description**
+![simulationtrace_fromttool](https://github.com/user-attachments/assets/4292e8d2-b44c-46e9-a259-b3e0f9f5e281)
 
 The **sequence diagram** depicts the dynamic behavior of the system over time:
 
