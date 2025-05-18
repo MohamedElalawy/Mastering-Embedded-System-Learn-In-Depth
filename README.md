@@ -24,7 +24,7 @@ This repository contains my assignments, practice files, and projects for the **
 ## 📊 Diploma Progress
 
 <div style="border:1px solid #ddd;padding:10px;border-radius:8px;margin-bottom:20px;">
-  <strong>Overall Progress: 25%</strong>
+  <strong>Overall Progress: 30%</strong>
   <div style="background:#eee;border-radius:8px;overflow:hidden;margin-top:5px;">
     <div style="width:20%;background:#f39c12;height:20px;"></div>
   </div>
