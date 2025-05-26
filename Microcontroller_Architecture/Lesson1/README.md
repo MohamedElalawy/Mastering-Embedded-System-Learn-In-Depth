@@ -185,7 +185,7 @@ Challenges:
 - Branch prediction needed
 - Increased complexity
 
-## 9. CLSC vs RLSC
+## 9. CISC vs RISC
 
 ### Complex Instruction Set Computer (CISC)
 - Many complex instructions
