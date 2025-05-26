@@ -15,12 +15,6 @@ Examples include microwave oven controllers, automotive engine control units, an
 ## 2. Deep Dive into Key Components and Terms
 
 ### Microcontroller Unit (MCU)
-
-
-<p align="center">
-  <img src="./bp32intechouse0507.jpg" alt="BP32 Board" style="width:60%; max-width:500px;">
-</p>
-
 A microcontroller is a compact integrated circuit that combines a processor core with memory and programmable input/output peripherals. Key features:
 - All components on a single chip
 - Designed for embedded applications
