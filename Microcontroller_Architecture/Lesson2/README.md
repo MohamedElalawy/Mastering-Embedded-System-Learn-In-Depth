@@ -1,6 +1,17 @@
 
 Unit 6 (MCU Fundamentals) - Lesson 2
-This unit covers port-mapped I/O and memory-mapped I/O.
+Port-mapped I/O
+ * Instruction Usage: Uses special machine instructions specifically designed for I/O operations.
+ * Address Space: The memory address space and the I/O device address space are independent of each other.
+ * Addressing: Each device is assigned one or more unique port numbers.
+ * Example: Intel x86 processors use IN and OUT instructions to read from or write to a port.
+Memory-mapped I/O
+ * Instruction Usage: Does not require any special instructions; it uses the native load and store instructions of the processor.
+ * Address Space: The memory and the I/O devices share the same address space.
+ * Addressing: Each peripheral register or data buffer is assigned to a memory address within the microprocessor's memory address space.
+ * Performance: Performed by the native load and store instructions of the processor.
+In essence, the key difference lies in how the CPU interacts with peripheral devices: Port-mapped I/O uses dedicated I/O instructions and a separate address space, while Memory-mapped I/O treats peripheral registers as memory locations and uses standard memory access instructions.
+
 MCU Memory Map
  * Access Register Methods:
    * Method 1: Using numeric memory address directly
