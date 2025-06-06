@@ -79,7 +79,7 @@ This repository contains my assignments, practice files, and projects for the **
   <td>
     <div style="background:#eee;width:100%;border-radius:8px;">
       <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
-    </div> <small>0%</small>
+    </div> <small>50%</small>
   </td></tr>
 
   <tr><td>🔹 MCU Interfacing</td>
