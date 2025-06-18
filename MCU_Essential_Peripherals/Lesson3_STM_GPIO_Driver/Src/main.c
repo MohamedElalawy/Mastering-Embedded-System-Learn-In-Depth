@@ -77,11 +77,11 @@ int main(void)
 		if(MCAL_GPIO_ReadPin(GPIOA, GPIO_PIN_13)==1){
 
 			MCAL_GPIO_TogglePin(GPIOB, GPIO_PIN_13);
-			while(MCAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1)==0); //Multi PRESSING
+			while(MCAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1)==1); //Multi PRESSING
 
 		}
 
-		delay(10);
+		delay(1);
 
 	}
 }

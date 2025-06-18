@@ -265,19 +265,19 @@ int main(void)
  8000282:	f44f 5100 	mov.w	r1, #8192	; 0x2000
  8000286:	4808      	ldr	r0, [pc, #32]	; (80002a8 <main+0x68>)
  8000288:	f000 f988 	bl	800059c <MCAL_GPIO_TogglePin>
-			while(MCAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1)==0); //Multi PRESSING
+			while(MCAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1)==1); //Multi PRESSING
  800028c:	bf00      	nop
  800028e:	2102      	movs	r1, #2
  8000290:	4805      	ldr	r0, [pc, #20]	; (80002a8 <main+0x68>)
  8000292:	f000 f96c 	bl	800056e <MCAL_GPIO_ReadPin>
  8000296:	4603      	mov	r3, r0
- 8000298:	2b00      	cmp	r3, #0
+ 8000298:	2b01      	cmp	r3, #1
  800029a:	d0f8      	beq.n	800028e <main+0x4e>
 
 		}
 
-		delay(10);
- 800029c:	200a      	movs	r0, #10
+		delay(1);
+ 800029c:	2001      	movs	r0, #1
  800029e:	f7ff ffb1 	bl	8000204 <delay>
 		if(MCAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1)==0){
  80002a2:	e7d3      	b.n	800024c <main+0xc>
