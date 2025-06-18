@@ -191,7 +191,19 @@ void MCAL_GPIO_DeInit(GPIO_TypeDef *GPIOx){
 
 
 }
-
+/**
+ * @brief  Reads the logic level of a specific GPIO input pin.
+ *
+ * This function checks the input data register (IDR) of the specified GPIO port
+ * and returns the current logic level (high or low) of the selected pin.
+ *
+ * @param[in] GPIOx      Pointer to the GPIO peripheral (e.g., GPIOA, GPIOB, etc.).
+ * @param[in] PinNumber  Specifies the GPIO pin to read. This parameter should be
+ *                       a value of @ref GPIO_PINS (e.g., GPIO_PIN_0, GPIO_PIN_1, ...).
+ *
+ * @retval GPIO_PIN_SET     The pin is at high logic level.
+ * @retval GPIO_PIN_RESET   The pin is at low logic level.
+ */
 uint8_t MCAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx,uint16_t PinNumber){
 
 	uint8_t Bit_Status;
@@ -208,6 +220,18 @@ uint8_t MCAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx,uint16_t PinNumber){
 
 }
 
+
+/**
+ * @brief  Reads the logic levels of all pins on a GPIO port.
+ *
+ * This function reads the input data register (IDR) of the specified GPIO port
+ * and returns the current logic levels of all its pins.
+ *
+ * @param[in] GPIOx  Pointer to the GPIO peripheral (e.g., GPIOA, GPIOB, etc.).
+ *
+ * @retval uint16_t  A 16-bit value representing the logic levels of all pins on the port.
+ *                   Each bit corresponds to a pin (bit 0 = pin 0, ..., bit 15 = pin 15).
+ */
 uint16_t MCAL_GPIO_ReadPort(GPIO_TypeDef *GPIOx){
 	uint16_t Port_Value;
 	Port_Value = (uint16_t)GPIOx->IDR;
@@ -215,35 +239,132 @@ uint16_t MCAL_GPIO_ReadPort(GPIO_TypeDef *GPIOx){
 
 }
 
+
+/**
+ * @brief  Writes a logic level to a specific GPIO output pin.
+ *
+ * This function sets or resets the specified GPIO pin by writing to the
+ * Bit Set/Reset Register (BSRR) or Bit Reset Register (BRR).
+ *
+ * @param[in] GPIOx      Pointer to the GPIO peripheral (e.g., GPIOA, GPIOB, etc.).
+ * @param[in] PinNumber  Specifies the GPIO pin to write. This parameter should be
+ *                       a value of @ref GPIO_PINS (e.g., GPIO_PIN_0, GPIO_PIN_1, ...).
+ * @param[in] Value      Specifies the logic level to write to the pin.
+ *                       - GPIO_PIN_SET:   Sets the pin (logic high)
+ *                       - GPIO_PIN_RESET: Resets the pin (logic low)
+ *
+ * @retval None
+ */
 void MCAL_GPIO_WritePin(GPIO_TypeDef *GPIOx,uint16_t PinNumber,uint8_t Value){
-
-
-
+	if (Value != GPIO_PIN_RESET){
+		//GPIOx->ODR |= PinNumber;
+		//or
+		GPIOx->BSRR = (uint32_t)PinNumber;
+	}
+	else
+	{
+		GPIOx->BRR = (uint32_t)PinNumber;
+	}
 }
+
+
+/**
+ * @brief  Writes a 16-bit value to all pins of a GPIO port.
+ *
+ * This function sets the output data register (ODR) of the specified GPIO port,
+ * updating the logic levels of all 16 pins at once.
+ *
+ * @param[in] GPIOx  Pointer to the GPIO peripheral (e.g., GPIOA, GPIOB, etc.).
+ * @param[in] Value  16-bit value to be written to the port. Each bit corresponds to
+ *                   a pin (bit 0 = pin 0, ..., bit 15 = pin 15).
+ *
+ * @retval None
+ *
+ * @note Use with caution, as it overwrites the state of all pins in the port.
+ */
 void MCAL_GPIO_WritePort(GPIO_TypeDef *GPIOx,uint16_t Value){
 
-
+	GPIOx->ODR = Value;
 
 
 }
 
+
+/**
+ * @brief  Toggles the state of a specific GPIO output pin.
+ *
+ * This function flips the logic level of the specified pin by performing
+ * a bitwise XOR on the output data register (ODR).
+ *
+ * @param[in] GPIOx      Pointer to the GPIO peripheral (e.g., GPIOA, GPIOB, etc.).
+ * @param[in] PinNumber  Specifies the GPIO pin to toggle. This parameter should be
+ *                       a value of @ref GPIO_PINS (e.g., GPIO_PIN_0, GPIO_PIN_1, ...).
+ *
+ * @retval None
+ *
+ * @note This operation affects only the specified pin. Other pins remain unchanged.
+ */
 
 void MCAL_GPIO_TogglePin(GPIO_TypeDef *GPIOx,uint16_t PinNumber){
 
 
-
+	GPIOx->ODR ^= PinNumber;
 
 }
 
 
+
+
+/**
+ * @brief  Locks the configuration of a specific GPIO pin.
+ *
+ * This function applies a lock to the configuration of the specified GPIO pin.
+ * Once locked, the pin configuration (mode, speed, etc.) cannot be modified
+ * until the next MCU reset. This feature is useful for preventing unintended
+ * changes to critical GPIO settings.
+ *
+ * The locking mechanism follows the hardware-required sequence:
+ * 1. Write 1 to LCKK bit along with the pin bit.
+ * 2. Write 0 to LCKK bit while keeping the pin bit.
+ * 3. Write 1 again to LCKK bit and pin bit.
+ * 4. Read twice to confirm lock.
+ *
+ * @param[in] GPIOx      Pointer to the GPIO peripheral (e.g., GPIOA, GPIOB, etc.).
+ * @param[in] PinNumber  Specifies the GPIO pin to lock. This parameter should be
+ *                       a value of @ref GPIO_PINS (e.g., GPIO_PIN_0, GPIO_PIN_1, ...).
+ *
+ * @retval GPIO_RETURN_LOCK_OK    Lock was successfully applied.
+ * @retval GPIO_RETURN_LOCK_ERROR Lock failed to apply.
+ *
+ * @note Locking is maintained until the next system reset.
+ *       Attempting to change the configuration of a locked pin will be ignored by hardware.
+ */
 uint8_t MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx,uint16_t PinNumber){
 
+    volatile uint32_t tmp = 1 << 16;  // Set LCKK[16]
+
+    // Set the LCKy
+    tmp |= PinNumber;
+
+    // Write sequence to lock the configuration
+    // Write 1
+    GPIOx->LCKR = tmp;
+    // Write 0
+    GPIOx->LCKR = PinNumber;
+    // Write 1
+    GPIOx->LCKR = tmp;
+
+    // Read 0
+    tmp = GPIOx->LCKR;
+    // Read 1 (this read is optional but confirms that the lock is active)
+    if ((uint32_t)(GPIOx->LCKR & (1 << 16)))
+    {
+        return GPIO_RETURN_LOCK_OK;  // Lock is active
+    }
 
 
-
-	return 0;
-
-
+    return GPIO_RETURN_LOCK_ERROR;  // Lock failed
 }
+
 
 
