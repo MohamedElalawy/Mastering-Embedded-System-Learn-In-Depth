@@ -8,7 +8,7 @@
 <h3 align="center">🚧 Current Progress</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Progress-40%25-orange?style=for-the-badge&logo=rocket" />
+  <img src="https://img.shields.io/badge/Progress-50%25-orange?style=for-the-badge&logo=rocket" />
 </p>
 
 
@@ -24,7 +24,7 @@ This repository contains my assignments, practice files, and projects for the **
 ## 📊 Diploma Progress
 
 <div style="border:1px solid #ddd;padding:10px;border-radius:8px;margin-bottom:20px;">
-  <strong>Overall Progress: 40%</strong>
+  <strong>Overall Progress: 50%</strong>
   <div style="background:#eee;border-radius:8px;overflow:hidden;margin-top:5px;">
     <div style="width:20%;background:#f39c12;height:20px;"></div>
   </div>
@@ -79,14 +79,14 @@ This repository contains my assignments, practice files, and projects for the **
   <td>
     <div style="background:#eee;width:100%;border-radius:8px;">
       <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
-    </div> <small>50%</small>
+    </div> <small>100%</small>
   </td></tr>
 
   <tr><td>🔹 MCU Interfacing</td>
   <td>
     <div style="background:#eee;width:100%;border-radius:8px;">
       <div style="width:0%;background:#bdc3c7;height:15px;border-radius:8px;"></div>
-    </div> <small>0%</small>
+    </div> <small>50%</small>
   </td></tr>
 
   <tr><td>🔹 MCU (Timers & ADC)</td>
