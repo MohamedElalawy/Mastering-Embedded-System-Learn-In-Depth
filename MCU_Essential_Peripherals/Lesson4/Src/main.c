@@ -18,7 +18,10 @@
 
 #include <stdint.h>
 #include "stm32f103c6_GPIO_Driver.h"
+#include "stm32f103c6_EXTI_Driver.h"
 #include "stm32f103x6.h"
+#include "keypad.h"
+#include "lcd.h"
 
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
@@ -32,29 +35,37 @@ void clock_init(){
 }
 
 void gpio_init(){
-	GPIO_Pin_Config_t Pin_Config;
-	Pin_Config.GPIO_Pin_Number = GPIO_PIN_1;
-	Pin_Config.GPIO_Mode = GPIO_MODE_INPUT_FLO;
-	MCAL_GPIO_Init(GPIOA, &Pin_Config);
+	GPIO_Pin_Config_t gpio_Pin_Config;
+
+	gpio_Pin_Config.GPIO_Pin_Number = GPIO_PIN_1;
+	gpio_Pin_Config.GPIO_Mode = GPIO_MODE_INPUT_FLO;
+	MCAL_GPIO_Init(GPIOA, &gpio_Pin_Config);
 
 
-	Pin_Config.GPIO_Pin_Number = GPIO_PIN_1;
-	Pin_Config.GPIO_Mode = GPIO_MODE_OUTPUT_PP;
-	Pin_Config.GPIO_Output_Speed = GPIO_SPEED_10M;
-	MCAL_GPIO_Init(GPIOB, &Pin_Config);
+	gpio_Pin_Config.GPIO_Pin_Number = GPIO_PIN_13;
+	gpio_Pin_Config.GPIO_Mode = GPIO_MODE_INPUT_FLO;
+	MCAL_GPIO_Init(GPIOA, &gpio_Pin_Config);
 
 
-	Pin_Config.GPIO_Pin_Number = GPIO_PIN_13;
-	Pin_Config.GPIO_Mode = GPIO_MODE_INPUT_FLO;
-	MCAL_GPIO_Init(GPIOA, &Pin_Config);
+	gpio_Pin_Config.GPIO_Pin_Number = GPIO_PIN_1;
+	gpio_Pin_Config.GPIO_Mode = GPIO_MODE_OUTPUT_PP;
+	gpio_Pin_Config.GPIO_Output_Speed = GPIO_SPEED_10M;
+	MCAL_GPIO_Init(GPIOB, &gpio_Pin_Config);
 
 
-	Pin_Config.GPIO_Pin_Number = GPIO_PIN_13;
-	Pin_Config.GPIO_Mode = GPIO_MODE_OUTPUT_PP;
-	Pin_Config.GPIO_Output_Speed = GPIO_SPEED_10M;
-	MCAL_GPIO_Init(GPIOB, &Pin_Config);
+
+
+	gpio_Pin_Config.GPIO_Pin_Number = GPIO_PIN_13;
+	gpio_Pin_Config.GPIO_Mode = GPIO_MODE_OUTPUT_PP;
+	gpio_Pin_Config.GPIO_Output_Speed = GPIO_SPEED_10M;
+	MCAL_GPIO_Init(GPIOB, &gpio_Pin_Config);
 
 }
+
+
+
+
+
 void delay(int time) {
     for (int i = 0; i < time; i++) {
         for (int j = 0; j < 255; j++);
@@ -62,11 +73,16 @@ void delay(int time) {
 }
 int main(void)
 {
+	EXTI_PinConfig_t EXTI_CFG ;
+
+	EXTI_CFG.EXTI_PIN = EXTI0PA0 ;
+
+
 	clock_init();
 	gpio_init();
 
-    /* Loop forever */
-	for(;;){
+
+	 for(;;){
 
 		if(MCAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1)==0){
 
@@ -81,7 +97,9 @@ int main(void)
 
 		}
 
-		delay(1);
+		delay(1000);
 
 	}
+
+
 }

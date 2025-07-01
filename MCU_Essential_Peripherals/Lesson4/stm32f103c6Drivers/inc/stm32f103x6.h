@@ -159,7 +159,51 @@ typedef struct{
 #define RCC_GPIOD_CLK_EN()    		(RCC->APB2ENR |= 1<<5)
 #define RCC_GPIOE_CLK_EN()    		(RCC->APB2ENR |= 1<<6)
 
-#define AFIO_GPIOA_CLK_EN()    		(RCC->APB2ENR |= 1<<0)
+#define RCC_AFIO_CLK_EN()    		(RCC->APB2ENR |= 1<<0)
+
+
+
+//********************************************
+//EXTI Macros:
+//********************************************
+#define EXTI0_IRQ		6
+#define EXTI1_IRQ		7
+#define EXTI2_IRQ		8
+#define EXTI3_IRQ		9
+#define EXTI4_IRQ		10
+#define EXTI5_IRQ		23
+#define EXTI6_IRQ		23
+#define EXTI7_IRQ		23
+#define EXTI8_IRQ		23
+#define EXTI9_IRQ		23
+#define EXTI10_IRQ		40
+#define EXTI11_IRQ		40
+#define EXTI12_IRQ		40
+#define EXTI13_IRQ		40
+#define EXTI14_IRQ		40
+#define EXTI15_IRQ		40
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

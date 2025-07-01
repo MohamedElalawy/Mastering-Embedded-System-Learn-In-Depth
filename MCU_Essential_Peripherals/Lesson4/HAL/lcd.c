@@ -6,6 +6,7 @@
  */
 
 #include "lcd.h"
+GPIO_Pin_Config_t PinCfg ;
 
 void delay_ms(uint32_t time) {
 	uint32_t i, j;

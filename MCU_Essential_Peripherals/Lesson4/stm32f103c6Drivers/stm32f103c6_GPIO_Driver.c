@@ -87,12 +87,12 @@ void MCAL_GPIO_Init(GPIO_TypeDef *GPIOx, GPIO_Pin_Config_t *Pin_Config){
 	volatile uint32_t *ConfigRegiter = NULL;
 	uint8_t PIN_CONFIG = 0;
 
-	ConfigRegiter = (Pin_Config->GPIO_Pin_Number < GPIO_PIN_8) ? &GPIOx->CRL : &GPIOx->CRH;
+	ConfigRegiter = (Pin_Config->GPIO_Pin_Number < GPIO_PIN_8) ? &(GPIOx->CRL) : &(GPIOx->CRH);
 	//reset CNF , MODE
 	(*ConfigRegiter) &= ~(0xF << Get_CRLH_Position(Pin_Config->GPIO_Pin_Number));
 
 	//if pin is OUTPUT
-	if(Pin_Config->GPIO_Mode == GPIO_MODE_OUTPUT_PP || Pin_Config->GPIO_Mode == GPIO_MODE_OUTPUT_OD||Pin_Config->GPIO_Mode == GPIO_MODE_OUTPUT_AF_PP||Pin_Config->GPIO_Mode == GPIO_MODE_OUTPUT_AF_OD){
+	if((Pin_Config->GPIO_Mode == GPIO_MODE_OUTPUT_PP) || (Pin_Config->GPIO_Mode == GPIO_MODE_OUTPUT_OD) || (Pin_Config->GPIO_Mode == GPIO_MODE_OUTPUT_AF_PP )|| (Pin_Config->GPIO_Mode == GPIO_MODE_OUTPUT_AF_OD)){
 
 		PIN_CONFIG = ((((Pin_Config->GPIO_Mode - 4) << 2) | (Pin_Config->GPIO_Output_Speed )) &0X0F);
 	}
@@ -101,18 +101,19 @@ void MCAL_GPIO_Init(GPIO_TypeDef *GPIOx, GPIO_Pin_Config_t *Pin_Config){
 	//if pin is INPUT
 	else
 	{
-		if(Pin_Config->GPIO_Mode == GPIO_MODE_INPUT_FLO || Pin_Config->GPIO_Mode == GPIO_MODE_Analog){
+		if((Pin_Config->GPIO_Mode == GPIO_MODE_INPUT_FLO) || (Pin_Config->GPIO_Mode == GPIO_MODE_Analog)){
 
-			PIN_CONFIG = (((Pin_Config->GPIO_Mode) << 2)  &0X0F);
+			PIN_CONFIG= ((((Pin_Config->GPIO_Mode) << 2) | 0x0)  &0X0F);
 		}
 		else if(Pin_Config->GPIO_Mode == GPIO_MODE_AF_INPUT)
 		{
-			PIN_CONFIG = ((GPIO_MODE_INPUT_FLO << 2)  &0X0F);
+			PIN_CONFIG = (((GPIO_MODE_INPUT_FLO << 2) | 0x0)  & 0X0F);
 
 		}
 		else //input PU/PD
 		{
-			PIN_CONFIG = ((GPIO_MODE_INPUT_PU << 2)  &0X0F);
+			PIN_CONFIG = (((GPIO_MODE_INPUT_PU << 2) | 0x0)  &0X0F);
+
 			if(Pin_Config->GPIO_Mode == GPIO_MODE_INPUT_PU)//PU
 			{
 				GPIOx->ODR |= Pin_Config->GPIO_Pin_Number;
@@ -124,7 +125,7 @@ void MCAL_GPIO_Init(GPIO_TypeDef *GPIOx, GPIO_Pin_Config_t *Pin_Config){
 		}
 	}
 	//write on CRL | CRH
-	(*ConfigRegiter) |= PIN_CONFIG << Get_CRLH_Position(Pin_Config->GPIO_Pin_Number);
+	(*ConfigRegiter) |= ((PIN_CONFIG) << Get_CRLH_Position(Pin_Config->GPIO_Pin_Number));
 
 
 }
@@ -207,12 +208,13 @@ void MCAL_GPIO_DeInit(GPIO_TypeDef *GPIOx){
 uint8_t MCAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx,uint16_t PinNumber){
 
 	uint8_t Bit_Status;
-	if((GPIOx->IDR & PinNumber) != (uint32_t)GPIO_PIN_RESET){
-		Bit_Status = GPIO_PIN_SET;
+
+	if(((GPIOx->IDR) & PinNumber) != (uint32_t)GPIO_PIN_RESET){
+		Bit_Status = (uint8_t)GPIO_PIN_SET;
 	}
 	else
 	{
-		Bit_Status = GPIO_PIN_RESET;
+		Bit_Status = (uint8_t)GPIO_PIN_RESET;
 
 	}
 
@@ -308,7 +310,7 @@ void MCAL_GPIO_WritePort(GPIO_TypeDef *GPIOx,uint16_t Value){
 void MCAL_GPIO_TogglePin(GPIO_TypeDef *GPIOx,uint16_t PinNumber){
 
 
-	GPIOx->ODR ^= PinNumber;
+	GPIOx->ODR ^= (PinNumber);
 
 }
 

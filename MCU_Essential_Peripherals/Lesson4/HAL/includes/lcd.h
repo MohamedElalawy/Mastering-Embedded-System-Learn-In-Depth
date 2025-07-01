@@ -41,7 +41,6 @@
 #define LCD_CLEAR_SCREEN							(0x01)
 #define LCD_ENTRY_MODE								(0x06)
 
-GPIO_Pin_Config_t PinCfg ;
 
 void LCD_INIT();
 void LCD_WRITE_COMMAND(unsigned char command);

@@ -5,12 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../stm32f103c6Drivers/stm32f103c6_EXTI_Driver.c \
 ../stm32f103c6Drivers/stm32f103c6_GPIO_Driver.c 
 
 OBJS += \
+./stm32f103c6Drivers/stm32f103c6_EXTI_Driver.o \
 ./stm32f103c6Drivers/stm32f103c6_GPIO_Driver.o 
 
 C_DEPS += \
+./stm32f103c6Drivers/stm32f103c6_EXTI_Driver.d \
 ./stm32f103c6Drivers/stm32f103c6_GPIO_Driver.d 
 
 
@@ -21,7 +24,7 @@ stm32f103c6Drivers/%.o stm32f103c6Drivers/%.su stm32f103c6Drivers/%.cyclo: ../st
 clean: clean-stm32f103c6Drivers
 
 clean-stm32f103c6Drivers:
-	-$(RM) ./stm32f103c6Drivers/stm32f103c6_GPIO_Driver.cyclo ./stm32f103c6Drivers/stm32f103c6_GPIO_Driver.d ./stm32f103c6Drivers/stm32f103c6_GPIO_Driver.o ./stm32f103c6Drivers/stm32f103c6_GPIO_Driver.su
+	-$(RM) ./stm32f103c6Drivers/stm32f103c6_EXTI_Driver.cyclo ./stm32f103c6Drivers/stm32f103c6_EXTI_Driver.d ./stm32f103c6Drivers/stm32f103c6_EXTI_Driver.o ./stm32f103c6Drivers/stm32f103c6_EXTI_Driver.su ./stm32f103c6Drivers/stm32f103c6_GPIO_Driver.cyclo ./stm32f103c6Drivers/stm32f103c6_GPIO_Driver.d ./stm32f103c6Drivers/stm32f103c6_GPIO_Driver.o ./stm32f103c6Drivers/stm32f103c6_GPIO_Driver.su
 
 .PHONY: clean-stm32f103c6Drivers
 
