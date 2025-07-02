@@ -53,8 +53,6 @@ void gpio_init(){
 	MCAL_GPIO_Init(GPIOB, &gpio_Pin_Config);
 
 
-
-
 	gpio_Pin_Config.GPIO_Pin_Number = GPIO_PIN_13;
 	gpio_Pin_Config.GPIO_Mode = GPIO_MODE_OUTPUT_PP;
 	gpio_Pin_Config.GPIO_Output_Speed = GPIO_SPEED_10M;
@@ -73,11 +71,34 @@ void delay(int time) {
 }
 int main(void)
 {
+	/*
 	EXTI_PinConfig_t EXTI_CFG ;
 
-	EXTI_CFG.EXTI_PIN = EXTI0PA0 ;
+	EXTI_CFG.EXTI_PIN = EXTI9PA9 ;
+
+*/
 
 
+
+
+	while(1){
+
+
+
+
+	}
+
+
+
+
+
+/*
+ *
+ *
+ *
+ *
+ *
+ *
 	clock_init();
 	gpio_init();
 
@@ -100,6 +121,6 @@ int main(void)
 		delay(1000);
 
 	}
-
+*/
 
 }

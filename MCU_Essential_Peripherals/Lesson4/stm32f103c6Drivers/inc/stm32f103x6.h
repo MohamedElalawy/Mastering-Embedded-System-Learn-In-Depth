@@ -24,6 +24,24 @@
 #define PERIPHERALS_BASE_ADDRESS							0x40000000ul
 #define CORTEX_M3_INTERNAL_PERIPHERALS_BASE_ADDRESS			0xE0000000ul
 
+#define NVIC_BASE_ADDRESS									0xE000E100ul
+
+#define NVIC_ISER0 											*(volatile uint32_t *)(NVIC_BASE_ADDRESS + 0x0)
+#define NVIC_ISER1 											*(volatile uint32_t *)(NVIC_BASE_ADDRESS + 0x4)
+#define NVIC_ISER2 											*(volatile uint32_t *)(NVIC_BASE_ADDRESS + 0x8)
+#define NVIC_ICER0 											*(volatile uint32_t *)(NVIC_BASE_ADDRESS + 0x80)
+#define NVIC_ICER1 											*(volatile uint32_t *)(NVIC_BASE_ADDRESS + 0x84)
+#define NVIC_ICER2 											*(volatile uint32_t *)(NVIC_BASE_ADDRESS + 0x88)
+
+
+
+
+
+
+
+
+
+
 
 //--------------------------------------------
 //Base addresses for APB2 BUS Peripherals
@@ -117,10 +135,7 @@ typedef struct{
 typedef struct{
 	volatile uint32_t EVCR;
 	volatile uint32_t MAPR;
-	volatile uint32_t EXTICR1;
-	volatile uint32_t EXTICR2;
-	volatile uint32_t EXTICR3;
-	volatile uint32_t EXTICR4;
+	volatile uint32_t EXTICR[4];
 			 uint32_t RESERVED0;
 	volatile uint32_t MAPR2;
 }AFIO_TypeDef;
@@ -142,7 +157,7 @@ typedef struct{
 #define RCC							((RCC_TypeDef*)RCC_BASE_ADDRESS)
 
 
-#define EXTI						((EXTI_TypeDef*)EXTTI_BASE_ADDRESS)
+#define EXTI						((EXTI_TypeDef*)EXTI_BASE_ADDRESS)
 
 
 #define AFIO						((AFIO_TypeDef*)AFIO_BASE_ADDRESS)
@@ -185,10 +200,26 @@ typedef struct{
 
 
 
+//********************************************
+//NVIC IRQ Enable, Disable Macros:
+//********************************************
+
+#define NVIC_IRQ6_EXTI0_ENABLE 			(NVIC_ISER0 |= 1<<6)
+#define NVIC_IRQ7_EXTI1_ENABLE 			(NVIC_ISER0 |= 1<<7)
+#define NVIC_IRQ8_EXTI2_ENABLE  		(NVIC_ISER0 |= 1<<8)
+#define NVIC_IRQ9_EXTI3_ENABLE  		(NVIC_ISER0 |= 1<<9)
+#define NVIC_IRQ10_EXTI4_ENABLE  		(NVIC_ISER0 |= 1<<10)
+#define NVIC_IRQ23_EXTI5_9_ENABLE 		(NVIC_ISER0 |= 1<<23)
+#define NVIC_IRQ40_EXTI10_15_ENABLE 	(NVIC_ISER1 |= 1<<8)	// Note: 40-32 = bit 8 in ISER1/ICER1
 
 
-
-
+#define NVIC_IRQ6_EXTI0_DISABLE           (NVIC_ICER0 |= 1<<6)
+#define NVIC_IRQ7_EXTI1_DISABLE           (NVIC_ICER0 |= 1<<7)
+#define NVIC_IRQ8_EXTI2_DISABLE           (NVIC_ICER0 |= 1<<8)
+#define NVIC_IRQ9_EXTI3_DISABLE           (NVIC_ICER0 |= 1<<9)
+#define NVIC_IRQ10_EXTI4_DISABLE          (NVIC_ICER0 |= 1<<10)
+#define NVIC_IRQ23_EXTI5_9_DISABLE        (NVIC_ICER0 |= 1<<23)
+#define NVIC_IRQ40_EXTI10_15_DISABLE      (NVIC_ICER1 |= 1<<8) // Note: 40-32 = bit 8 in ISER1/ICER1
 
 
 

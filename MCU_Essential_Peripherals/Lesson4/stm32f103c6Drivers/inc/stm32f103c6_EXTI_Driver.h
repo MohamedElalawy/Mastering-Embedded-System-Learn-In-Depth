@@ -21,24 +21,24 @@
 
 typedef struct
 {
-	uint16_t 		ETI_InputLineNumber;
-	GPIO_TypeDef*	GPIO_Port;
-	uint16_t 		GPIO_PIN;
-	uint8_t         IVT_IRQ_Number;
+	uint16_t 				ETI_InputLineNumber;
+	GPIO_TypeDef*			GPIO_Port;
+	uint16_t 				GPIO_PIN;
+	uint8_t         		IVT_IRQ_Number;
 }EXTI_GPIO_MAPPING_t;
 
 typedef struct
 {
-	EXTI_GPIO_MAPPING_t EXTI_PIN;//specifies the external interrupt GPIO mapping, this parameter must be set based on @ref EXTI_define
+	EXTI_GPIO_MAPPING_t 	EXTI_PIN;//specifies the external interrupt GPIO mapping, this parameter must be set based on @ref EXTI_define
+	uint8_t 				Trigger_case; //rising or falling or both. @ref EXTI_Trigger_define
+	uint8_t					IRQ_EN;    // Enable or disable the EXTI(masking and NVIC). @ref EXTI_IRQ_define
+	void (*P_IRQ_CALLBACK)(void);	//set the function which will be called back when the IRQ happen
 
 }EXTI_PinConfig_t;
 
 
 #define EXTI0	0
 #define EXTI0_IRQ 6
-
-
-
 
 
 //--------------------------------------------
@@ -145,10 +145,16 @@ typedef struct
 #define EXTI15PD15 (EXTI_GPIO_MAPPING_t){EXTI15, GPIOD, GPIO_PIN_15, EXTI15_IRQ}
 
 
+//@ref EXTI_Trigger_define
+#define EXTI_Trigger_Rising					0
+#define EXTI_Trigger_Falling				1
+#define EXTI_Trigger_RisingAndFalling		2
 
 
 
-
+//@ref EXTI_IRQ_define
+#define EXTI_IRQ_ENABLE						1
+#define EXTI_IRQ_DISABLE					0
 
 
 
@@ -161,6 +167,34 @@ typedef struct
 //************EXTI Supported APIs*************
 //********************************************
 
+void MCAL_EXTI_GPIO_INIT(EXTI_PinConfig_t * EXTI_Config);
+
+
+void MCAL_EXTI_GPIO_DEINIT(void);
+
+
+void MCAL_EXTI_GPIO_UPDATE(EXTI_PinConfig_t * EXTI_Config);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #endif /* INC_STM32F103C6_EXTI_DRIVER_H_ */
+
+
+
+
+
+
+
+
